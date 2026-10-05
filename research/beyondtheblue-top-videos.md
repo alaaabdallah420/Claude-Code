@@ -20,3 +20,26 @@ My video: https://youtu.be/YRECPDtcJ0A
 - **"The Entire Ocean Is Terrified of [Animal]"**: one animal set against everything else in the ocean. The channel reuses it (sperm whales, blue whales, pilot whales).
 - **"...the Deeper you Go" / "Turn Animals Into Giants"**: a rule about how nature changes with place or depth.
 - **"Nothing About X Is Normal... Here's Why"**: a strange-place hook with an ellipsis cliffhanger.
+
+---
+
+# My channel: IntoTheBlue
+- First video: https://youtu.be/YRECPDtcJ0A
+- Next video title: **Why Even Orcas Are Terrified of Pilot Whales**
+- Format: voiceover + animation + B-roll, 15–20 min. Goal: views → loyal audience → monetization.
+- Strategy: stick to proven topics/formulas in the ocean-animal niche until the channel is established.
+
+# Competitor channels: top videos
+
+| Channel | Title | Views | Link |
+|---|---|---|---|
+| OctoLab (@OctoLabYT) | Why The Ocean's Deadliest Predator Refuses To Kill Us (orcas) | 7.1M in ~2 months | https://www.youtube.com/watch?v=VtrcKTkhDHU (link likely, not confirmed) |
+| Mr. Science (@mr.scienceYT) | (not indexed yet) | | |
+| LetsGoSwimmin (@LetsGoSwimmin) | (not indexed yet) | | |
+| AbyssLab (@AbyssLabYT) | (not indexed yet) | | |
+| DrownedEarth (@DrownedEarth1) | (not indexed yet) | | |
+| Science Revealed (@ScienceRevealed-d8x) | (not indexed yet) | | |
+| SupremeSeas (@SupremeSeas) | (not indexed yet) | | |
+| MidnightZone (@MidnightZone96) | (not indexed yet) | | |
+
+Note: The OctoLab orca title has been copied at least 5 times by other channels ("...Refuses To Eat Humans", "...Deadliest Hunter Refuses To Kill Us", etc.). Copying a hit title this closely is common in this niche.
