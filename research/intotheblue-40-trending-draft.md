@@ -65,9 +65,9 @@ Inspiration: https://www.youtube.com/watch?v=tOmJPaPly8A — 3,062,386 views, Th
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What could make the most feared shark on Earth abandon its own home?
 
@@ -97,9 +97,9 @@ Inspiration: https://www.youtube.com/watch?v=-W1Mwd0BWT4 — 3,986,269 views, Bl
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 How can an animal the size of a bus stay almost completely invisible for centuries?
 
@@ -129,9 +129,9 @@ Inspiration: https://www.youtube.com/watch?v=7FUbwlfSIWQ — 3,831,158 views, As
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 What if the megalodon in movies looks nothing like the real one?
 
@@ -161,9 +161,9 @@ Inspiration: https://www.youtube.com/watch?v=N6UPb63cTwU — 3,765,882 views, SH
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What happens when a feast falls into the darkest place on Earth?
 
@@ -193,9 +193,9 @@ Inspiration: https://www.youtube.com/watch?v=Ny9MwC8V7hc — 1,527,526 views, Ze
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 What does the stomach of the ocean's biggest predator really hide?
 
@@ -225,9 +225,9 @@ Inspiration: https://www.youtube.com/watch?v=MBug25H5Eys — 1,890,557 views, Th
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 How strange does life get as you sink deeper into the ocean?
 
@@ -257,9 +257,9 @@ Inspiration: https://www.youtube.com/watch?v=ktkkt31AtuY — 475,718 views, Step
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 Why would evolution give a killer whale something almost only humans have?
 
@@ -289,9 +289,9 @@ Inspiration: https://www.youtube.com/watch?v=eWu92oXtxsw — 2,712,182 views, Ex
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Who ruled the ocean before sharks and whales?
 
@@ -321,9 +321,9 @@ Inspiration: https://www.youtube.com/watch?v=4U3zda3w1uM — 1,458,539 views, Th
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 How can the largest animal that has ever lived survive by eating something smaller than your finger?
 
@@ -353,9 +353,9 @@ Inspiration: https://www.youtube.com/watch?v=Sgv759nx3Sg — 1,797,222 views, Pr
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What happens when two of the planet's top predators start sharing the same waters?
 
@@ -385,9 +385,9 @@ Inspiration: https://www.youtube.com/watch?v=ouhiLIwp6ug — 1,263,707 views, Au
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 How do you hide in a place where there's nowhere to hide?
 
@@ -417,9 +417,9 @@ Inspiration: https://www.youtube.com/watch?v=NOd3NlVOAaw — 1,162,689 views, Un
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 Could the largest shark that ever lived still be out there, hiding where no one can see?
 
@@ -449,9 +449,9 @@ Inspiration: https://www.youtube.com/watch?v=2ng7FJGwOD0 — 1,481,432 views, Ne
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 Why would the ocean's smartest predator start going after boats?
 
@@ -481,9 +481,9 @@ Inspiration: https://www.youtube.com/watch?v=GrdPLimIWrc — 1,260,148 views, Ex
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Think the blue whale is the only ocean giant? Think again.
 
@@ -513,9 +513,9 @@ Inspiration: https://www.youtube.com/watch?v=rsJ1jTT7fgc — 822,016 views, Wild
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 How does a whale defend itself against the smartest hunters in the ocean?
 
@@ -545,9 +545,9 @@ Inspiration: https://www.youtube.com/watch?v=JpR3oeTlzos — 629,035 views, SciS
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What if one of the top predators of the dinosaur age wasn't a reptile — but an octopus?
 
@@ -577,9 +577,9 @@ Inspiration: https://www.youtube.com/watch?v=F2dPT24PI0o — 776,988 views, KPas
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Is the killer whale's greatest threat… another killer whale?
 
@@ -609,9 +609,9 @@ Inspiration: https://www.youtube.com/watch?v=jJv4dX-5pp8 — 1,985,366 views, Wi
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 Think you know sharks? Wait until you see the ones living in the dark.
 
@@ -641,9 +641,9 @@ Inspiration: https://www.youtube.com/watch?v=Hm9ADZ28Wgo — 712,660 views, Anto
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What if we could finally understand what whales are saying?
 
@@ -673,9 +673,9 @@ Inspiration: https://www.youtube.com/watch?v=PfIcT1mziFM — 737,655 views, Gala
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 What kind of predator can eat a great white shark?
 
@@ -705,9 +705,9 @@ Inspiration: https://www.youtube.com/watch?v=qAOPOJQX93c — 590,856 views, TheB
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 How is the biggest animal of all time alive right now?
 
@@ -737,9 +737,9 @@ Inspiration: https://www.youtube.com/watch?v=hsubV2gShos — 588,726 views, Octo
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 Can a killer whale feel grief?
 
@@ -769,9 +769,9 @@ Inspiration: https://www.youtube.com/watch?v=-PA-m4w0_g4 — 777,480 views, Till
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 How many kinds of whales are there — and how different can they really be?
 
@@ -801,9 +801,9 @@ Inspiration: https://www.youtube.com/watch?v=wuTfB214gnk — 528,202 views, Spin
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 What monsters lived in the deep sea millions of years ago — and why will we never find them?
 
@@ -833,9 +833,9 @@ Inspiration: https://www.youtube.com/watch?v=dNJomSb8Q7g — 303,595 views, Apex
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 Why would the ocean's top predator hesitate in front of a walrus?
 
@@ -865,9 +865,9 @@ Inspiration: https://www.youtube.com/watch?v=Qt_81jHYvRk — 476,114 views, Mr O
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 What if one of the smartest minds on Earth has nine brains and no bones?
 
@@ -897,9 +897,9 @@ Inspiration: https://www.youtube.com/watch?v=f-pNsPejelY — 491,669 views, Beyo
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 Could anything in the ocean hunt the biggest shark that ever lived?
 
@@ -929,9 +929,9 @@ Inspiration: https://www.youtube.com/watch?v=fkv6AT8uq6c — 353,390 views, Rive
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What makes divers afraid of a squid?
 
@@ -961,9 +961,9 @@ Inspiration: https://www.youtube.com/watch?v=GY3KEP086MM — 496,575 views, Nati
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Why are more people seeing great white sharks than ever before?
 
@@ -993,9 +993,9 @@ Inspiration: https://www.youtube.com/watch?v=gSuT_g9_8FE — 186,442 views, Boun
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 What's it like to start life as the calf of the ocean's deepest-diving predator?
 
@@ -1025,9 +1025,9 @@ Inspiration: https://www.youtube.com/watch?v=GMJrFE27chc — 406,589 views, Ocea
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What kind of shark leaves perfect round holes in the biggest animal on Earth?
 
@@ -1057,9 +1057,9 @@ Inspiration: https://www.youtube.com/watch?v=rgHL0M-uO6Y — 230,666 views, Spin
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Before whales became gentle giants, what were they?
 
@@ -1089,9 +1089,9 @@ Inspiration: https://www.youtube.com/watch?v=dY3q2Oj2lPM — 511,623 views, Beyo
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 How could a fish hunt a giant squid?
 
@@ -1121,9 +1121,9 @@ Inspiration: https://www.youtube.com/watch?v=sCmzHP3RK1g — 284,575 views, Deep
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 Why can't the biggest animals on Earth survive a few hours on the beach?
 
@@ -1153,9 +1153,9 @@ Inspiration: https://www.youtube.com/watch?v=5i8HFOPpETw — 256,440 views, The 
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 How strange can a squid get?
 
@@ -1185,9 +1185,9 @@ Inspiration: https://www.youtube.com/watch?v=mPOf2fpy7B4 — 225,894 views, Brav
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
+We pour weeks into every single video because we believe these creatures deserve to have their stories told properly. If you've enjoyed the journey, supporting us with a coffee is the biggest way to help IntoTheBlue keep exploring.
 
 What if the most terrifying predator on the reef was hiding right under the sand?
 
@@ -1217,9 +1217,9 @@ Inspiration: https://www.youtube.com/watch?v=nvw5sZMvAE8 — 117,657 views, Mr. 
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
+Every IntoTheBlue documentary takes weeks of research, scripting, voiceover, animation and editing — made by a tiny team that simply loves the ocean. If this video gave you even a moment of wonder, a coffee helps us keep diving deeper. Every bit of support goes straight into the next video.
 
 What's the strangest fish in the deep sea?
 
@@ -1249,9 +1249,9 @@ Inspiration: https://www.youtube.com/watch?v=SwwHsdqJY0I — 146,855 views, Natu
 **Video description**
 
 ```
-☕ Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
+💙 Support IntoTheBlue: https://buymeacoffee.com/BlueOcisius
 
-💙 Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
+Behind every minute of this video are hours of reading research papers, writing, recording and animating — all so you can see the ocean the way we do. If you'd like more of these videos to exist, a coffee keeps us going more than you know.
 
 Everyone knows the biggest animal on Earth — but what about number two?
 
