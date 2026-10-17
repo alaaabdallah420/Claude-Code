@@ -176,7 +176,7 @@ p { margin: 0; }
   border: 1px solid rgba(246, 220, 164, .5); box-shadow: 0 0 40px rgba(240,184,90,.3);
   transition: transform .6s var(--ease), background .3s;
 }
-.play svg { width: 26px; fill: var(--gold-hi); margin-left: 4px; }
+.play svg { width: 26px; fill: var(--gold-hi); }
 .yt:hover .play { transform: scale(1.08); background: rgba(240, 184, 90, .22); }
 
 /* ---------- Clients marquee ---------- */
