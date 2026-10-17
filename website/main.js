@@ -5,16 +5,16 @@
    ========================================================= */
 const WORK = {
   long: [
-    { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'Documentary · This Is Big Industry' },
-    { id: 'YRECPDtcJ0A', title: 'Why Even Killer Whales Run From Pilot Whales', tag: 'Nature documentary · IntoTheBlue' },
-    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Editing Clients', tag: 'Talking head · Maksymilian Skrobisz' },
-    { id: '9BfVfF89z_4', title: '3D Animated Map, War Style', tag: 'Maps · Sound design' },
+    { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'Documentary · IntoTheBlue' },
+    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'Documentary · 3D · IntoTheBlue' },
+    { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'Documentary · 3D · IntoTheBlue' },
+    { id: 'ppXq8ilDw_o', title: 'Why Even the Deep Sea Monsters Fear Sperm Whales', tag: 'Documentary · IntoTheBlue' },
   ],
   // Add your Shorts IDs here, e.g. { id: 'abc123XYZ', title: 'Hook edit', tag: 'TikTok · Reels' }
   shorts: [],
   motion: [
-    { id: '9BfVfF89z_4', title: '3D Animated Map, War Style + SFX', tag: '3D maps · Sound design' },
-    { id: '1-HiOjR-fBM', title: 'Ultra 3D Animations + SFX', tag: '3D motion · Sound design' },
+    { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'Animated maps · This Is Big Industry' },
+    { id: '9BfVfF89z_4', title: '3D Animated Map, War Style', tag: '3D maps · Sound design' },
   ],
 };
 
@@ -24,37 +24,42 @@ const WORK = {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- Render video grids ---------- */
+  // Thumbnails: put a file in assets/thumbs/<id>.webp, otherwise YouTube's thumbnail is used.
   const card = (v, short) => `
-    <button class="vid yt" data-id="${v.id}" data-short="${short ? 1 : ''}" aria-label="Play ${v.title}">
+    <a class="vid yt" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" data-id="${v.id}" data-short="${short ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
-        <img src="https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg" alt="" loading="lazy"
-             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/hqdefault.jpg'">
+        <img src="assets/thumbs/${v.id}.webp" alt="" loading="lazy"
+             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg'">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       </span>
       <span class="vid__meta"><span class="vid__title">${v.title}</span><span class="vid__tag">${v.tag || ''}</span></span>
-    </button>`;
+    </a>`;
   const empty = () => `<div class="vid vid--empty"><span class="vid__media">Vertical edit<br>coming soon</span></div>`;
 
-  document.querySelectorAll('.panel').forEach(panel => {
+  document.querySelectorAll('.vids').forEach(panel => {
     const key = panel.dataset.panel;
     const list = WORK[key] || [];
     const isShort = key === 'shorts';
     panel.innerHTML = list.length ? list.map(v => card(v, isShort)).join('') : Array(4).fill(0).map(empty).join('');
   });
 
-  /* ---------- Tabs ---------- */
-  const tabs = document.querySelectorAll('.tabs button');
-  const pill = document.querySelector('.tabs__pill');
-  const movePill = btn => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft - 4}px)`; pill.style.left = '4px'; };
-  tabs.forEach(btn => btn.addEventListener('click', () => {
-    tabs.forEach(b => b.setAttribute('aria-selected', b === btn));
-    document.querySelectorAll('.panel').forEach(p => p.hidden = p.dataset.panel !== btn.dataset.tab);
-    movePill(btn);
-  }));
-  const syncPill = () => movePill(document.querySelector('.tabs [aria-selected="true"]'));
-  window.addEventListener('resize', syncPill);
-  document.fonts ? document.fonts.ready.then(syncPill) : syncPill();
-  syncPill();
+  /* ---------- Tabs (work + pricing) ---------- */
+  document.querySelectorAll('[data-tabs]').forEach(group => {
+    const name = group.dataset.tabs;
+    const btns = group.querySelectorAll('button');
+    const pill = group.querySelector('.tabs__pill');
+    const move = btn => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft}px)`; };
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      btns.forEach(b => b.setAttribute('aria-selected', b === btn));
+      document.querySelectorAll(`[data-group="${name}"]`).forEach(p => p.hidden = p.dataset.panel !== btn.dataset.tab);
+      move(btn);
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    }));
+    const sync = () => move(group.querySelector('[aria-selected="true"]'));
+    window.addEventListener('resize', sync);
+    if (document.fonts) document.fonts.ready.then(sync);
+    sync();
+  });
 
   /* ---------- Video lightbox (YouTube only loads on click = fast page) ---------- */
   const lb = document.getElementById('lightbox');
@@ -63,6 +68,8 @@ const WORK = {
   document.addEventListener('click', e => {
     const t = e.target.closest('.yt');
     if (!t) return;
+    if (window.self !== window.top) return; // inside a preview frame: let the link open YouTube
+    e.preventDefault();
     frame.classList.toggle('is-short', !!t.dataset.short);
     frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${t.dataset.id}?autoplay=1&rel=0&modestbranding=1" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
     lb.hidden = false; document.body.style.overflow = 'hidden';

@@ -1,7 +1,7 @@
 # Alaa Media website
 
 A fast, single-page portfolio. Plain HTML, CSS and JavaScript, no WordPress and no build step.
-Total size of the site's own files is about 110 KB (your old WordPress page loaded several MB).
+Total size of the site, images included, is about 600 KB (your old WordPress page loaded several MB).
 
 ```
 website/
@@ -18,24 +18,17 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
 
 ## Before you publish: checklist
 
-1. **Swap in your new videos.** Open `main.js` and replace the IDs in `WORK`.
-   The ID is the part after `watch?v=` (or after `/shorts/` for a Short).
-   - `long`: your best 4 long-form edits (always an even number so the grid stays full)
-   - `shorts`: 4 or 8 Shorts/Reels (the tab shows "coming soon" tiles until you add some)
-   - `motion`: maps, 3D and motion graphics pieces
-   - The big showreel at the top: in `index.html`, search `reel__frame` and change `data-id` and the image URL to a new video ID.
-     Best option: cut a 60–90 second showreel of your newest work and upload it to YouTube as unlisted.
-2. **Replace the sample numbers in "Results".** The stats (62%, +120K, 3.4x) and the two case-study cards are
-   placeholders. Search `REPLACE` in `index.html`. Only use numbers you can show if a client asks.
-   For retention graphs, take a screenshot in YouTube Studio → Analytics → Engagement → Audience retention,
-   save it as `assets/retention-yacine.png`, and replace the `<figure class="graph">…</figure>` block with
-   `<img src="assets/retention-yacine.png" alt="Audience retention graph" class="case__graph">`.
-   Ask clients for permission before showing their analytics.
-3. **Set your prices** in the Pricing section (search `from $`).
-4. **Check the client list** in the moving strip under the showreel. Only keep names you've worked for.
-5. **Booking month**: the hero says "Booking projects for November". Update it monthly, or change it to "Available for new projects".
-
----
+1. **Videos.** Open `main.js` and edit the `WORK` list at the top. The ID is the part after `watch?v=` (or after `/shorts/`).
+   For a fast page, save each thumbnail as `assets/thumbs/<ID>.webp`. If it's missing, the page falls back to YouTube's thumbnail.
+   - `long`: your 4 newest documentaries (already filled with IntoTheBlue)
+   - `shorts`: add 4 or 8 Shorts/Reels. The tab shows "coming soon" tiles until you do.
+   - `motion`: maps and motion pieces. These are still older videos, so swap in newer ones.
+2. **Craft gallery** ("What I add to your video"): real frames from your videos, stored in `assets/f-*.webp`.
+   Swap them for newer frames anytime. Keep them 16:9, about 1100 px wide.
+3. **Maps section** (the cream-colored one): uses `assets/f-map-europe.webp` and `assets/f-map-3d.webp`. Replace them with your best new map frames.
+4. **Results**: the numbers are real (IntoTheBlue squid video, YouTube Studio). Add client results when you have permission.
+5. **Prices**: search `from</span>$` and `plan__price--sm` in `index.html`.
+6. **Client names** in the moving strip: only keep names you've worked for.
 
 ## What was wrong with the old site
 
@@ -47,7 +40,7 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
 | No proof of results | "Trustworthy" comes from numbers, not adjectives like "cinematic precision" | Results section with stats, retention graphs and growth charts |
 | No Shorts section | Half your buyers want vertical content | Long-form / Shorts / Motion tabs |
 | "No revisions" in your process | Scares clients away; every pro offers revisions | "Two revision rounds included" |
-| No prices at all | Serious clients self-qualify by price; cheap ones leave early | "From $X" pricing, fixed quotes |
+| No prices at all | Serious clients self-qualify by price; cheap ones leave early | Full-edit and graphics-only packages |
 | Stats almost invisible (gray on black) and the same description copy-pasted under two different stats | Looks unfinished | Clear stats, each with its own label |
 | Big empty About section, "Ala" vs "Alaa", lowercase "my mission", mixing "we" and "I" | Small mistakes make clients doubt your attention to detail, which is what they're paying for | Consistent copy throughout |
 | 98% client satisfaction with no source | Unverifiable claims lower trust | Removed; replaced with reply time |
