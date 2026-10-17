@@ -20,14 +20,14 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
 
 1. **Videos.** Open `main.js` and edit the `WORK` list at the top. The ID is the part after `watch?v=` (or after `/shorts/`).
    For a fast page, save each thumbnail as `assets/thumbs/<ID>.webp`. If it's missing, the page falls back to YouTube's thumbnail.
-   - `long`: your 4 newest documentaries (already filled with IntoTheBlue)
-   - `shorts`: add 4 or 8 Shorts/Reels. The tab shows "coming soon" tiles until you do.
-   - `motion`: maps and motion pieces. These are still older videos, so swap in newer ones.
-2. **Craft gallery** ("What I add to your video"): real frames from your videos, stored in `assets/f-*.webp`.
+   - `long`: the Yacine Yasslim episode (featured, links to Drive) plus your 4 newest IntoTheBlue documentaries.
+     Tip: upload the Yacine episode to YouTube or Vimeo as unlisted and swap the Drive link, so it plays in the page.
+   - `shorts` and `motion`: empty for now. A category only appears once it has videos.
+2. **Capabilities** section: real frames from your videos, stored in `assets/f-*.webp`.
    Swap them for newer frames anytime. Keep them 16:9, about 1100 px wide.
-3. **Maps section** (the cream-colored one): uses `assets/f-map-europe.webp` and `assets/f-map-3d.webp`. Replace them with your best new map frames.
-4. **Results**: the numbers are real (IntoTheBlue squid video, YouTube Studio). Add client results when you have permission.
-5. **Prices**: search `from</span>$` and `plan__price--sm` in `index.html`.
+3. **Maps section**: uses `assets/f-map-history.webp` (from the Yacine episode).
+4. **Results**: the numbers are real (IntoTheBlue squid video, YouTube Studio). The chart data is the `RETENTION` list in `main.js`.
+5. **Prices**: search `Starting at` in `index.html`.
 6. **Client names** in the moving strip: only keep names you've worked for.
 
 ## What was wrong with the old site
@@ -39,7 +39,7 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
 | Videos are full YouTube embeds that load at once | Slow page; on the screenshot they showed as black boxes | Thumbnails only; the video loads when clicked, in a lightbox |
 | No proof of results | "Trustworthy" comes from numbers, not adjectives like "cinematic precision" | Results section with stats, retention graphs and growth charts |
 | No Shorts section | Half your buyers want vertical content | Long-form / Shorts / Motion tabs |
-| "No revisions" in your process | Scares clients away; every pro offers revisions | "Two revision rounds included" |
+| Process copy was vague and generic | Doesn't show how a premium studio works | Clear 4-step process; revisions billed per round, stated in every proposal |
 | No prices at all | Serious clients self-qualify by price; cheap ones leave early | Full-edit and graphics-only packages |
 | Stats almost invisible (gray on black) and the same description copy-pasted under two different stats | Looks unfinished | Clear stats, each with its own label |
 | Big empty About section, "Ala" vs "Alaa", lowercase "my mission", mixing "we" and "I" | Small mistakes make clients doubt your attention to detail, which is what they're paying for | Consistent copy throughout |

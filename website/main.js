@@ -1,21 +1,36 @@
 /* =========================================================
    Alaa Media — main.js
-   EDIT YOUR VIDEOS HERE. Use the YouTube video ID
-   (the part after "watch?v=" or after "/shorts/").
+   EDIT YOUR VIDEOS HERE.
+   - YouTube videos: use the ID (the part after "watch?v=").
+   - Videos hosted elsewhere (Drive, Vimeo): add `url` and `thumb`.
+   - `feature: true` shows the video full width at the top.
+   - A category with no videos is hidden automatically.
    ========================================================= */
 const WORK = {
   long: [
+    {
+      feature: true,
+      title: 'Yacine Yasslim · Episode 3',
+      tag: 'Latest project · History documentary · Animated maps · Motion design',
+      url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
+      thumb: 'assets/thumbs/yacine-ep3.webp',
+    },
+    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'Documentary · 3D animation · IntoTheBlue' },
+    { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'Documentary · 3D animation · IntoTheBlue' },
     { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'Documentary · IntoTheBlue' },
-    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'Documentary · 3D · IntoTheBlue' },
-    { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'Documentary · 3D · IntoTheBlue' },
     { id: 'ppXq8ilDw_o', title: 'Why Even the Deep Sea Monsters Fear Sperm Whales', tag: 'Documentary · IntoTheBlue' },
   ],
-  // Add your Shorts IDs here, e.g. { id: 'abc123XYZ', title: 'Hook edit', tag: 'TikTok · Reels' }
+  // e.g. { id: 'abc123XYZ', title: 'Hook edit', tag: 'TikTok · Reels' }
   shorts: [],
-  motion: [
-    { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'Animated maps · This Is Big Industry' },
-    { id: '9BfVfF89z_4', title: '3D Animated Map, War Style', tag: '3D maps · Sound design' },
-  ],
+  motion: [],
+};
+
+/* Audience retention of the squid documentary (YouTube Studio, lifetime).
+   [seconds, % of viewers still watching] */
+const RETENTION = {
+  duration: 1031,
+  points: [[0,103],[16,78],[27,77],[38,68],[55,65],[85,65],[96,61],[106,63],[115,61],[147,61],[161,59],[181,59],[195,57],[346,57],[359,56],[421,56],[435,54],[476,54],[489,53],[544,53],[558,51],[668,51],[681,49],[784,49],[795,48],[846,48],[869,41],[907,40],[921,41],[969,41],[983,38],[1024,38],[1031,34]],
+  marks: [[16, 'After the intro'], [516, 'Midpoint'], [1031, 'Final second']],
 };
 
 (() => {
@@ -24,29 +39,36 @@ const WORK = {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- Render video grids ---------- */
-  // Thumbnails: put a file in assets/thumbs/<id>.webp, otherwise YouTube's thumbnail is used.
-  const card = (v, short) => `
-    <a class="vid yt" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" data-id="${v.id}" data-short="${short ? 1 : ''}" aria-label="Play ${v.title}">
+  const card = (v, short) => {
+    const href = v.url || `https://www.youtube.com/watch?v=${v.id}`;
+    const thumb = v.thumb || `assets/thumbs/${v.id}.webp`;
+    const fallback = v.id ? `onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg'"` : '';
+    return `
+    <a class="vid ${v.id ? 'yt' : ''} ${v.feature ? 'vid--feature' : ''}" href="${href}" target="_blank" rel="noopener"
+       ${v.id ? `data-id="${v.id}"` : ''} data-short="${short ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
-        <img src="assets/thumbs/${v.id}.webp" alt="" loading="lazy"
-             onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg'">
+        ${v.feature ? '<span class="vid__badge">Latest project</span>' : ''}
+        <img src="${thumb}" alt="" loading="lazy" ${fallback}>
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       </span>
       <span class="vid__meta"><span class="vid__title">${v.title}</span><span class="vid__tag">${v.tag || ''}</span></span>
     </a>`;
-  const empty = () => `<div class="vid vid--empty"><span class="vid__media">Vertical edit<br>coming soon</span></div>`;
-
+  };
   document.querySelectorAll('.vids').forEach(panel => {
-    const key = panel.dataset.panel;
-    const list = WORK[key] || [];
-    const isShort = key === 'shorts';
-    panel.innerHTML = list.length ? list.map(v => card(v, isShort)).join('') : Array(4).fill(0).map(empty).join('');
+    const list = WORK[panel.dataset.panel] || [];
+    panel.innerHTML = list.map(v => card(v, panel.dataset.panel === 'shorts')).join('');
   });
 
-  /* ---------- Tabs (work + pricing) ---------- */
+  /* ---------- Tabs: hide empty categories; hide the bar if only one is left ---------- */
   document.querySelectorAll('[data-tabs]').forEach(group => {
     const name = group.dataset.tabs;
-    const btns = group.querySelectorAll('button');
+    const panels = [...document.querySelectorAll(`[data-group="${name}"]`)];
+    group.querySelectorAll('button').forEach(btn => {
+      const p = panels.find(x => x.dataset.panel === btn.dataset.tab);
+      if (p && !p.children.length) { btn.remove(); p.remove(); }
+    });
+    const btns = [...group.querySelectorAll('button')];
+    if (btns.length < 2) { group.remove(); return; }
     const pill = group.querySelector('.tabs__pill');
     const move = btn => { pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft}px)`; };
     btns.forEach(btn => btn.addEventListener('click', () => {
@@ -55,19 +77,19 @@ const WORK = {
       move(btn);
       if (window.ScrollTrigger) ScrollTrigger.refresh();
     }));
-    const sync = () => move(group.querySelector('[aria-selected="true"]'));
+    const sync = () => move(group.querySelector('[aria-selected="true"]') || btns[0]);
     window.addEventListener('resize', sync);
     if (document.fonts) document.fonts.ready.then(sync);
     sync();
   });
 
-  /* ---------- Video lightbox (YouTube only loads on click = fast page) ---------- */
+  /* ---------- Video lightbox (YouTube loads only on click) ---------- */
   const lb = document.getElementById('lightbox');
   const frame = lb.querySelector('.lightbox__frame');
   const close = () => { lb.hidden = true; frame.innerHTML = ''; document.body.style.overflow = ''; };
   document.addEventListener('click', e => {
     const t = e.target.closest('.yt');
-    if (!t) return;
+    if (!t || !t.dataset.id) return;
     if (window.self !== window.top) return; // inside a preview frame: let the link open YouTube
     e.preventDefault();
     frame.classList.toggle('is-short', !!t.dataset.short);
@@ -76,6 +98,92 @@ const WORK = {
   });
   lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('.lightbox__close')) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) close(); });
+
+  /* ---------- Retention chart ---------- */
+  const chartEl = document.getElementById('retention');
+  if (chartEl) {
+    const NS = 'http://www.w3.org/2000/svg';
+    const fmt = s => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
+    const valueAt = t => {
+      const p = RETENTION.points;
+      for (let i = 1; i < p.length; i++) if (t <= p[i][0]) {
+        const [t0, v0] = p[i - 1], [t1, v1] = p[i];
+        return v0 + (v1 - v0) * ((t - t0) / (t1 - t0 || 1));
+      }
+      return p[p.length - 1][1];
+    };
+    // monotone cubic path (keeps the curve from overshooting)
+    const smooth = pts => {
+      const n = pts.length, d = [], m = [];
+      for (let i = 0; i < n - 1; i++) d.push((pts[i + 1][1] - pts[i][1]) / (pts[i + 1][0] - pts[i][0] || 1));
+      m[0] = d[0]; m[n - 1] = d[n - 2];
+      for (let i = 1; i < n - 1; i++) m[i] = d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2;
+      let s = `M${pts[0][0]},${pts[0][1]}`;
+      for (let i = 0; i < n - 1; i++) {
+        const h = (pts[i + 1][0] - pts[i][0]) / 3;
+        s += ` C${pts[i][0] + h},${pts[i][1] + m[i] * h} ${pts[i + 1][0] - h},${pts[i + 1][1] - m[i + 1] * h} ${pts[i + 1][0]},${pts[i + 1][1]}`;
+      }
+      return s;
+    };
+    const tip = document.createElement('div'); tip.className = 'chart__tip';
+    let geo = null;
+
+    const draw = () => {
+      const W = chartEl.clientWidth, H = chartEl.clientHeight;
+      if (!W) return;
+      const L = 40, R = W < 560 ? 16 : 24, T = 34, B = 28;
+      const max = 110;
+      const x = t => L + (t / RETENTION.duration) * (W - L - R);
+      const y = v => T + (1 - v / max) * (H - T - B);
+      const pts = RETENTION.points.map(([t, v]) => [x(t), y(v)]);
+      const line = smooth(pts);
+      const ticks = [0, 25, 50, 75, 100];
+      const xt = [0, RETENTION.duration / 2, RETENTION.duration];
+      const narrow = W < 560;
+      const marks = RETENTION.marks.map(([t, label], i) => {
+        const v = valueAt(t), px = x(t), py = y(v);
+        const anchor = i === 0 ? 'start' : i === RETENTION.marks.length - 1 ? 'end' : 'middle';
+        const dx = i === 0 ? 10 : i === RETENTION.marks.length - 1 ? -2 : 0;
+        return `<g class="mark"><circle cx="${px}" cy="${py}" r="5"/>
+          <text x="${px + dx}" y="${py - 14}" text-anchor="${anchor}">${Math.round(v)}%${narrow ? '' : `<tspan class="sub" dx="6">${label}</tspan>`}</text></g>`;
+      }).join('');
+      chartEl.innerHTML = `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">
+        <defs><linearGradient id="rg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="var(--gold)" stop-opacity=".38"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></linearGradient></defs>
+        <g class="grid">${ticks.map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ylab" x="${L - 10}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join('')}</g>
+        ${xt.map((t, i) => `<text class="xlab" x="${x(t)}" y="${H - 6}" text-anchor="${i === 0 ? 'start' : i === 2 ? 'end' : 'middle'}">${fmt(t)}</text>`).join('')}
+        <g class="reveal-mask">
+          <path d="${line} L${x(RETENTION.duration)},${y(0)} L${x(0)},${y(0)}Z" fill="url(#rg)"/>
+          <path class="line" d="${line}"/>
+          ${marks}
+        </g>
+        <g class="scrub"><line y1="${T - 10}" y2="${y(0)}"/><circle r="6"/></g>
+      </svg>`;
+      chartEl.append(tip);
+      geo = { x, y, L, R, W };
+    };
+
+    const scrub = clientX => {
+      if (!geo) return;
+      const r = chartEl.getBoundingClientRect();
+      const px = Math.min(Math.max(clientX - r.left, geo.L), geo.W - geo.R);
+      const t = ((px - geo.L) / (geo.W - geo.L - geo.R)) * RETENTION.duration;
+      const v = valueAt(t);
+      const g = chartEl.querySelector('.scrub');
+      g.querySelector('line').setAttribute('x1', px); g.querySelector('line').setAttribute('x2', px);
+      g.querySelector('circle').setAttribute('cx', px); g.querySelector('circle').setAttribute('cy', geo.y(v));
+      tip.innerHTML = `<b>${Math.round(v)}%</b> still watching at ${fmt(t)}`;
+      tip.style.left = Math.min(Math.max(px, 90), geo.W - 90) + 'px';
+      chartEl.classList.add('is-active');
+    };
+    chartEl.addEventListener('pointermove', e => scrub(e.clientX));
+    chartEl.addEventListener('pointerdown', e => scrub(e.clientX));
+    chartEl.addEventListener('pointerleave', () => chartEl.classList.remove('is-active'));
+
+    draw();
+    let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 120); });
+    if (document.fonts) document.fonts.ready.then(draw);
+  }
 
   /* ---------- Split statement into words ---------- */
   const st = document.querySelector('.split');
@@ -108,7 +216,6 @@ const WORK = {
   const io = new IntersectionObserver(entries => entries.forEach(en => {
     if (!en.isIntersecting) return;
     const el = en.target;
-    // small stagger for siblings
     const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
     el.style.transitionDelay = Math.min(sibs.indexOf(el), 4) * 80 + 'ms';
     el.classList.add('in');
@@ -117,7 +224,7 @@ const WORK = {
   }), { rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  /* ---------- Apple-style scroll effects (GSAP + Lenis from CDN) ---------- */
+  /* ---------- Smooth scrolling + scroll effects (GSAP + Lenis from CDN) ---------- */
   window.addEventListener('load', () => {
     if (reduced || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
@@ -133,16 +240,14 @@ const WORK = {
       }));
     }
 
-    // Showreel grows and flattens as you scroll into it
-    gsap.fromTo('.reel__frame',
-      { scale: .86, rotateX: 14, borderRadius: 40 },
-      { scale: 1, rotateX: 0, borderRadius: 28, ease: 'none',
-        scrollTrigger: { trigger: '.reel', start: 'top 95%', end: 'center 55%', scrub: true } });
-
     // Statement words light up one by one
     gsap.to('.statement__text .w', {
       opacity: 1, stagger: .1, ease: 'none',
       scrollTrigger: { trigger: '.statement', start: 'top 75%', end: 'bottom 60%', scrub: true },
     });
+
+    // Map frame drifts gently as you scroll past it
+    gsap.fromTo('.maps__frame', { y: 40 }, { y: -40, ease: 'none',
+      scrollTrigger: { trigger: '.maps', start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 })();
