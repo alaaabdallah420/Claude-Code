@@ -24,7 +24,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - VSLs & Ads: Ad Pack from $600 (3 ads, $200/ad) · VSL from $1,200 · Launch Package custom (2 VSLs, 6 ads, Shorts cutdowns, thumbnails)
 - YouTube & Documentaries: Essential from $650 · Signature from $1,200 · Cinematic custom
 - Shorts: 6 for $480 · 12 for $900 · 24 for $1,680
-- Motion & 3D: Map Pack from $390 (3) · Graphics Pack from $260 (10, most popular) · 3D Scene from $300
+- Motion & 3D: Map Sequence from $130 (1) · Graphics Pack from $260 (10, most popular) · 3D Scene from $200
 - Monthly: Growth from $2,400 · Studio from $4,500 · Custom
 - Add-ons: thumbnail $60 · rush +30% · revision round $90 · project files $150 · script notes $80
 
