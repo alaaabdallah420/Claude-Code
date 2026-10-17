@@ -25,11 +25,11 @@ const TRAILER = {
 const WORK = {
   // Your best work, in order. `vertical: true` items go in the vertical row underneath.
   featured: [
-    VSL,
+    { ...TRAILER, feature: true, badge: 'Latest project' },
+    { ...VSL, feature: false },
     { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
     { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
     { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
-    TRAILER,
     { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
     { id: 'FEBQx-135r0', vertical: true, title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
     { id: '1-HiOjR-fBM', vertical: true, title: 'The Pareto principle', tag: 'Maksymilian · Neon motion' },
