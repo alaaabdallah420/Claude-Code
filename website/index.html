@@ -115,16 +115,16 @@
   </div>
 
   <div class="tabs reveal" role="tablist" aria-label="Work type" data-tabs="work">
-    <button role="tab" aria-selected="true" data-tab="long">Long-form</button>
+    <button role="tab" aria-selected="true" data-tab="ads">Ads &amp; VSLs</button>
+    <button role="tab" aria-selected="false" data-tab="long">Long-form</button>
     <button role="tab" aria-selected="false" data-tab="shorts">Shorts &amp; Reels</button>
-    <button role="tab" aria-selected="false" data-tab="ads">Ads &amp; VSLs</button>
     <span class="tabs__pill" aria-hidden="true"></span>
   </div>
 
   <!-- Videos are rendered from the WORK list at the top of main.js -->
-  <div class="panel vids" data-group="work" data-panel="long"></div>
-  <div class="panel vids vids--shorts" data-group="work" data-panel="shorts" hidden></div>
-  <div class="panel vids" data-group="work" data-panel="ads" hidden></div>
+  <div class="panel" data-group="work" data-panel="ads"></div>
+  <div class="panel" data-group="work" data-panel="long" hidden></div>
+  <div class="panel" data-group="work" data-panel="shorts" hidden></div>
 </section>
 
 <!-- ============ CAPABILITIES ============ -->
@@ -170,7 +170,7 @@
     <div class="maps__frame">
       <img src="assets/f-map-history.webp" alt="Animated historical map of the Middle East showing the Abbasid Caliphate, Ayyubids, Sultanate of Rum and the Mongol Empire" loading="lazy" width="1400" height="788">
     </div>
-    <figcaption class="float float--map"><b>1258</b> Abbasid Caliphate · Yacine Yasslim, Ep. 3</figcaption>
+    <figcaption class="float float--map"><b>1258</b> Abbasid Caliphate · Yacine Tareb trailer</figcaption>
   </figure>
 </section>
 
@@ -554,7 +554,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <p>© <span id="year">2026</span> Alaa Media. Operated by Alaa Business LLC, 30 N Gould St, Ste R, Sheridan, WY 82801, USA.</p>
-    <p><a href="#top">Back to top ↑</a></p>
+    <p class="footer__links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 

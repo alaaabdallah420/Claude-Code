@@ -4,6 +4,7 @@ Static one-page portfolio for Alaa Media (Alaa Business LLC, USA): premium video
 No build step. Open `index.html` in a browser, or run `python3 -m http.server` in this folder and visit http://localhost:8000.
 
 ## Files
+- `privacy.html`, `terms.html`: legal pages (linked in every footer). Not lawyer-reviewed.
 - `index.html`: all page content. Sections in order: hero, client strip, statement, Who I work with, Recent productions, Capabilities, Maps, Results, Services (bento), Process, Pricing (tabs + add-ons), Testimonials, About, FAQ, Contact.
 - `styles.css`: design tokens in `:root` at the top (espresso black + champagne gold). Fonts: Poppins (body/headings) + Playfair Display italic (gold accent words in `<em>`).
 - `main.js`: `WORK` list (videos; YouTube ID or `url` + `thumb`; `feature: true` = full width), `RETENTION` data for the chart, tabs, lightbox, scroll reveals. GSAP + ScrollTrigger (cdnjs) and Lenis (unpkg) for smooth scrolling.
@@ -16,7 +17,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - All prices say "Starting at". Big/complex tiers are "Custom quote".
 - Don't mention payment methods (no PayPal/Wise/Payoneer). Just "Invoices are issued by Alaa Business LLC (USA)".
 - IntoTheBlue is presented as client work, never as the owner's channel.
-- Work cards use the real YouTube thumbnails. Selected Work has 3 tabs (Long-form, Shorts & Reels, Ads & VSLs) driven by `WORK` in main.js; `{ placeholder: true }` entries are gold "your project next" slots to replace with new samples. Vertical covers are 9:16 crops in assets/thumbs.
+- Work cards use the real YouTube thumbnails. Selected Work has 3 tabs (Ads & VSLs first, then Long-form, Shorts & Reels); in `WORK.ads`, `vertical: true` items go in a "Vertical ads" row driven by `WORK` in main.js; `{ placeholder: true }` entries are gold "your project next" slots to replace with new samples. Vertical covers are 9:16 crops in assets/thumbs.
 - Service visuals are drawn in CSS/SVG in the gold style; don't use screenshots there.
 - Copy: plain, confident, professional; never beginner-sounding labels.
 
@@ -32,6 +33,6 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - Real LinkedIn profile URL (currently a placeholder linking to linkedin.com).
 - New portrait photos for About (`assets/alaa-portrait.webp`, 4:5).
 - Cal.com booking link for "Book a call" buttons.
-- Upload the Yacine Yasslim Ep. 3 video to YouTube/Vimeo and replace the Drive link in `main.js`.
+- The featured "Product Launch Trailer" (Yacine Tareb) plays from Google Drive; a designed thumbnail would look better than the current map frame (`assets/thumbs/yacine-ep3.webp`).
 - Replace the placeholder slots in `WORK.shorts` and `WORK.ads` with new samples.
 - Deploy: Cloudflare Pages, output directory = this folder; custom domain via Cloudflare Registrar.

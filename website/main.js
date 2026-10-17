@@ -7,38 +7,43 @@
    - A category with no videos is hidden automatically.
    ========================================================= */
 const WORK = {
-  long: [
+  // Ads, VSLs and trailers. `vertical: true` puts a video in the "Vertical ads" row.
+  ads: [
     {
       feature: true,
-      title: 'Yacine Yasslim · Episode 3',
-      tag: 'History documentary · Maps · Motion design',
+      title: 'Product Launch Trailer',
+      tag: 'Yacine Tareb · Trailer · Maps · Motion design',
       url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
       embed: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/preview',
       thumb: 'assets/thumbs/yacine-ep3.webp',
     },
+    { id: 'AgiVkBR3BYk', title: 'How I Charged My Client $10,892', tag: 'Ad · 3D motion · Iman Gadzhi style' },
+    { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
+    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
+    { placeholder: true, title: 'Your VSL, next', tag: 'VSLs from $1,200' },
+    { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
+    { placeholder: true, vertical: true, title: 'Your ad, next', tag: 'Ad packs from $600' },
+    { placeholder: true, vertical: true, title: 'Your UGC ad, next', tag: 'Book a discovery call' },
+    { placeholder: true, vertical: true, title: 'Your launch, next', tag: 'Launch packages' },
+  ],
+  long: [
     { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
-    { id: 'Sj4JboSZ-qQ', title: 'Angels Heard by NASA?', tag: 'Yacine · Documentary · Motion' },
-    { id: 'DE6eRTl43DI', title: 'The Story of the Prophet Ibrahim', tag: 'Yacine · History documentary' },
+    { id: 'Sj4JboSZ-qQ', title: 'Angels Heard by NASA?', tag: 'Yacine Tareb · Documentary · Motion' },
+    { id: 'DE6eRTl43DI', title: 'The Story of the Prophet Ibrahim', tag: 'Yacine Tareb · History documentary' },
     { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
     { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'IntoTheBlue · 3D animation' },
     { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'IntoTheBlue · Documentary' },
   ],
   // Vertical edits. Covers are 9:16 images in assets/thumbs/<id>.webp.
   shorts: [
-    { id: '9BfVfF89z_4', title: 'War map breakdown', tag: 'Yacine · 3D map · SFX' },
+    { id: '9BfVfF89z_4', title: 'War map breakdown', tag: 'Yacine Tareb · 3D map · SFX' },
     { id: '1-HiOjR-fBM', title: 'The Pareto principle', tag: 'Maksymilian · Neon motion' },
     { id: '1b7R1PcUWA4', title: 'Not enough time?', tag: 'Reel · 3D animation' },
     { id: 'g5VQDPh4LWI', title: 'Ender Dragon', tag: 'Reel · 3D animation' },
-    { id: 'PbK2OGVqe6g', title: 'Perfume ad', tag: 'Ad · 3D product scene' },
     { id: 'FEBQx-135r0', title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
     { placeholder: true, title: 'Your Short, next', tag: 'Shorts packs from $480' },
     { placeholder: true, title: 'Your Reel, next', tag: 'Book a discovery call' },
-  ],
-  ads: [
-    { id: 'AgiVkBR3BYk', title: 'How I Charged My Client $10,892', tag: 'Ad · 3D motion · Iman Gadzhi style' },
-    { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
-    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
-    { placeholder: true, title: 'Your VSL or ad, next', tag: 'Ad packs from $600 · VSLs from $1,200' },
+    { placeholder: true, title: 'Your TikTok, next', tag: 'Shorts packs from $480' },
   ],
 };
 
@@ -76,9 +81,14 @@ const RETENTION = {
       <span class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></span>
     </a>`;
   };
-  document.querySelectorAll('.vids').forEach(panel => {
+  document.querySelectorAll('[data-group="work"]').forEach(panel => {
     const list = WORK[panel.dataset.panel] || [];
-    panel.innerHTML = list.map(v => card(v, panel.dataset.panel === 'shorts')).join('');
+    if (!list.length) { panel.innerHTML = ''; return; }
+    const wide = list.filter(v => !v.vertical), tall = list.filter(v => v.vertical);
+    if (panel.dataset.panel === 'shorts') { panel.innerHTML = `<div class="vids vids--shorts">${list.map(v => card(v, true)).join('')}</div>`; return; }
+    panel.innerHTML =
+      (wide.length ? `<div class="vids">${wide.map(v => card(v, false)).join('')}</div>` : '') +
+      (tall.length ? `<p class="vids__label">Vertical ads</p><div class="vids vids--shorts">${tall.map(v => card(v, true)).join('')}</div>` : '');
   });
 
   /* ---------- Tabs: hide empty categories; hide the bar if only one is left ---------- */
