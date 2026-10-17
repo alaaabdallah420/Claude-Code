@@ -500,14 +500,20 @@ p { margin: 0; }
 @media (max-width: 900px) { .who { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .who { grid-template-columns: 1fr; } }
 
-/* ---------- Brand films still ---------- */
-.filmframe { position: relative; aspect-ratio: 2.39 / 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-2); background: #000; }
-.filmframe img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) sepia(.15) contrast(1.05); animation: kenburns 18s ease-in-out infinite alternate; }
-.filmframe::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), transparent 30%, transparent 70%, rgba(0,0,0,.45)); }
-.filmframe__meta, .filmframe__tc { position: absolute; z-index: 1; font-size: 9px; font-weight: 600; letter-spacing: .14em; color: rgba(255,244,228,.85); font-variant-numeric: tabular-nums; }
-.filmframe__meta { top: 9px; left: 11px; display: flex; align-items: center; gap: 6px; }
-.filmframe__meta b { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 6px var(--gold); animation: glow 1.4s ease-in-out infinite; }
-.filmframe__tc { bottom: 9px; right: 11px; }
+/* ---------- Brand films: film strip ---------- */
+.filmstrip { position: relative; height: 96px; align-self: stretch; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
+.filmstrip__track { display: flex; width: max-content; height: 100%; animation: strip 14s linear infinite; }
+.filmstrip__frames { display: flex; gap: 6px; height: 100%; padding: 0 3px; align-items: center; position: relative;
+  background:
+    radial-gradient(circle, rgba(240,184,90,.4) 1.8px, transparent 2.4px) 0 3px / 12px 10px repeat-x,
+    radial-gradient(circle, rgba(240,184,90,.4) 1.8px, transparent 2.4px) 0 calc(100% - 3px) / 12px 10px repeat-x,
+    linear-gradient(180deg, #120c07, #0d0905); }
+.filmstrip__frames::before { content: ""; position: absolute; inset: 0; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); pointer-events: none; }
+.filmstrip__frames i { width: 82px; height: 58px; border-radius: 6px; border: 1px solid var(--line); background: linear-gradient(135deg, #3a2c1f, #1d150e); }
+.filmstrip__frames i:nth-child(3n+1) { background: linear-gradient(135deg, rgba(240,184,90,.55), rgba(194,126,44,.25)); border-color: rgba(240,184,90,.4); }
+.filmstrip__frames i:nth-child(4n+2) { background: linear-gradient(160deg, #4a3826, #22180f); }
+.filmstrip__gate { position: absolute; left: 50%; top: 50%; width: 96px; height: 68px; translate: -50% -50%; border: 1.5px solid var(--gold-hi); border-radius: 9px; box-shadow: 0 0 22px rgba(240,184,90,.45), inset 0 0 18px rgba(240,184,90,.18); }
+@keyframes strip { to { transform: translateX(-50%); } }
 
 /* ---------- Socials ---------- */
 .socials a { display: inline-flex; align-items: center; gap: 8px; }
