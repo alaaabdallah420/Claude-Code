@@ -29,7 +29,7 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
 4. **Results**: the numbers are real (IntoTheBlue squid video, YouTube Studio). The chart data is the `RETENTION` list in `main.js`.
 5. **Prices**: in `index.html`, search `PRICING`. Each tab (Documentaries, Shorts, Motion & Maps, Monthly) is one block, followed by the add-ons list and the new-client offer line.
 6. **Client names** in the moving strip: only keep names you've worked for.
-7. **Instagram link**: search `instagram.com` in `index.html` and paste your new link.
+7. **Social links**: search `instagram.com`, `t.me` or `wa.me` in `index.html`.
 8. **Portrait**: `assets/alaa-portrait.webp` (4:5, about 900×1125). Send a new photo and it can be placed on the same gold backdrop.
 9. **Logo**: `assets/logo.svg` (also used as the browser tab icon). The nav version is inline in `index.html`.
 
