@@ -22,9 +22,9 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - Copy: plain, confident, professional; never beginner-sounding labels.
 
 ## Current prices
-- VSLs & Ads: Ad Pack from $450 (3 ads, $150/ad) · VSL from $650 (simple VSL; heavy motion/3D quoted like Signature) · Launch Package custom (2 VSLs, 6 ads, Shorts cutdowns, thumbnails)
+- VSLs & Ads: Ad Pack from $450 (3 ads, $150/ad) · VSL from $650, up to 12 min (advanced motion graphics quoted on scope) · Launch Package custom (2 VSLs, 6 ads, Shorts cutdowns, thumbnails)
 - YouTube & Documentaries: Essential from $650 · Signature from $1,200 · Cinematic custom
-- Shorts: 6 for $480 · 12 for $900 · 24 for $1,680
+- Shorts: 6 for $480 · 12 for $900 (most popular) · 24 for $1,680 (best value)
 - Motion & 3D: Map Sequence from $120 (1) · Graphics Pack from $260 (10, most popular) · 3D Scene from $200
 - Monthly: Growth from $1,800 (2 Signature-level videos/VSLs + 3 Shorts ≈ $780/video + $80/Short, saves 32%) · Studio from $2,800 (3 Signature-level videos/VSLs + 12 Shorts ≈ $673/video + $65/Short, saves 38%) · Custom
 - Add-ons: thumbnail $60 · rush +30% · revision round $90 · project files $150 · script notes $80
