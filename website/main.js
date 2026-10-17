@@ -64,13 +64,12 @@ const WORK = {
     { placeholder: true, title: 'Your Reel, next', tag: 'Book a discovery call' },
     { placeholder: true, title: 'Your TikTok, next', tag: 'Shorts packs from $480' },
   ],
-  // `reel` = a looping silent video (MP4) shown big at the top of the tab.
+  // Looping animations. `loop` can be an .mp4 (silent) or a .gif. Add `id` (YouTube) or `url` to make it clickable.
   animations: [
-    { reel: 'assets/animation-reel.mp4', poster: 'assets/animation-reel-poster.webp', title: 'Animation reel', tag: '3D · Motion design · Maps · Data visuals' },
-    { id: '1b7R1PcUWA4', vertical: true, title: 'Not enough time?', tag: 'Reel · 3D animation' },
-    { id: 'g5VQDPh4LWI', vertical: true, title: 'Ender Dragon', tag: 'Reel · 3D animation' },
-    { id: 'FEBQx-135r0', vertical: true, title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
-    { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
+    { loop: 'assets/loops/squid.mp4', poster: 'assets/loops/squid.webp', title: '3D creatures & worlds', tag: '3D animation' },
+    { loop: 'assets/loops/titles.mp4', poster: 'assets/loops/titles.webp', title: 'Kinetic titles', tag: 'Motion design' },
+    { loop: 'assets/loops/maps.mp4', poster: 'assets/loops/maps.webp', title: 'Historical maps', tag: 'Animated maps' },
+    { loop: 'assets/loops/data.mp4', poster: 'assets/loops/data.webp', title: 'Data & explainers', tag: 'Infographics' },
   ],
 };
 
@@ -88,7 +87,15 @@ const RETENTION = {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---------- Render video grids ---------- */
+  const loopMedia = v => /\.gif$/i.test(v.loop)
+    ? `<img src="${v.loop}" alt="" loading="lazy">`
+    : `<video src="${v.loop}" poster="${v.poster || ''}" autoplay muted loop playsinline preload="metadata"></video>`;
   const card = (v, short) => {
+    if (v.loop && !v.id && !v.url) return `
+    <figure class="vid vid--loop">
+      <span class="vid__media">${loopMedia(v)}</span>
+      <figcaption class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></figcaption>
+    </figure>`;
     if (v.placeholder) return `
     <a class="vid vid--placeholder" href="#pricing">
       <span class="vid__media"><span class="vid__plus" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></span>
@@ -102,7 +109,7 @@ const RETENTION = {
        ${v.id ? `data-id="${v.id}"` : ''} ${v.embed ? `data-embed="${v.embed}"` : ''} data-short="${v.native ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
         ${v.feature ? `<span class="vid__badge">${v.badge || 'Latest project'}</span>` : ''}
-        <img src="${thumb}" alt="" loading="lazy" ${fallback}>
+        ${v.loop ? loopMedia(v) : `<img src="${thumb}" alt="" loading="lazy" ${fallback}>`}
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       </span>
       <span class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></span>
@@ -113,7 +120,7 @@ const RETENTION = {
     if (!list.length) { panel.innerHTML = ''; return; }
     const wide = list.filter(v => !v.vertical), tall = list.filter(v => v.vertical);
     if (panel.dataset.panel === 'shorts') { panel.innerHTML = `<div class="vids vids--shorts">${list.map(v => card(v, true)).join('')}</div>`; return; }
-    const labels = { ads: 'Vertical ads', featured: 'Vertical edits', animations: '3D animation reels' };
+    const labels = { ads: 'Vertical ads', featured: 'Vertical edits', animations: 'Vertical animations' };
     const reel = v => `
       <figure class="reel">
         <div class="reel__frame"><video src="${v.reel}" poster="${v.poster || ''}" autoplay muted loop playsinline preload="metadata"></video>

@@ -17,7 +17,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - All prices say "Starting at". Big/complex tiers are "Custom quote".
 - Don't mention payment methods (no PayPal/Wise/Payoneer). Just "Invoices are issued by Alaa Business LLC (USA)".
 - IntoTheBlue is presented as client work, never as the owner's channel.
-- Work cards use the real YouTube thumbnails. Selected Work has 5 tabs: Featured work (owner's top picks, in his order), Ads & VSLs, Long-form, Shorts & Reels, Animations. In any `WORK` list, `vertical: true` items go in a vertical row under the main grid; `{ reel: 'file.mp4' }` shows a big looping silent video driven by `WORK` in main.js; `{ placeholder: true }` entries are gold "your project next" slots to replace with new samples. Vertical covers are 9:16 crops in assets/thumbs.
+- Work cards use the real YouTube thumbnails. Selected Work has 5 tabs: Featured work (owner's top picks, in his order), Ads & VSLs, Long-form, Shorts & Reels, Animations. In any `WORK` list, `vertical: true` items go in a vertical row under the main grid; `loop: 'assets/loops/x.mp4'` (or a .gif) makes any card play a silent looping animation instead of a thumbnail driven by `WORK` in main.js; `{ placeholder: true }` entries are gold "your project next" slots to replace with new samples. Vertical covers are 9:16 crops in assets/thumbs.
 - Service visuals are drawn in CSS/SVG in the gold style; don't use screenshots there.
 - Copy: plain, confident, professional; never beginner-sounding labels.
 
@@ -33,7 +33,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - Real LinkedIn profile URL (currently a placeholder linking to linkedin.com).
 - New portrait photos for About (`assets/alaa-portrait.webp`, 4:5).
 - Cal.com booking link for "Book a call" buttons.
-- `assets/animation-reel.mp4` is a stand-in made from stills (slow zooms + crossfades). Replace it with a real 20–30s animation reel exported from Premiere (1280×720, H.264, silent, ~2–4 MB).
+- The 4 Animations loops in `assets/loops/` are stand-ins made from stills (slow push-in/out). Replace each with a real 4–8s clip exported from Premiere (960×540 or 1280×720, H.264, silent, under ~1 MB) or a GIF.
 - The Product Launch Trailer thumbnail is still a map frame; a designed one (like `thumbs/vsl-flying-sales.webp`) would look better.
 - Replace the placeholder slots in `WORK.shorts` and `WORK.ads` with new samples.
 - Deploy: Cloudflare Pages, output directory = this folder; custom domain via Cloudflare Registrar.
