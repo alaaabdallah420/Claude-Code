@@ -166,19 +166,44 @@ const RETENTION = {
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
   }
 
-  /* ---------- Hero glow follows the mouse ---------- */
+  /* ---------- Hero: 3D tilt + glow + label parallax that follow the mouse ---------- */
   const hv = document.querySelector('.hero__visual');
-  if (hv && !reduced) {
-    let raf = 0;
+  if (hv && !reduced && window.matchMedia('(hover: hover)').matches) {
+    const rest = { rx: 3, ry: -8, mx: 50, my: 55, fx: 0, fy: 0 };
+    const cur = { ...rest }, tgt = { ...rest };
+    let running = false;
+    const apply = () => {
+      hv.style.setProperty('--rx', cur.rx.toFixed(2) + 'deg');
+      hv.style.setProperty('--ry', cur.ry.toFixed(2) + 'deg');
+      hv.style.setProperty('--mx', cur.mx.toFixed(1) + '%');
+      hv.style.setProperty('--my', cur.my.toFixed(1) + '%');
+      hv.style.setProperty('--fx', cur.fx.toFixed(1) + 'px');
+      hv.style.setProperty('--fy', cur.fy.toFixed(1) + 'px');
+    };
+    const tick = () => {
+      let moving = false;
+      for (const k in cur) {
+        const d = tgt[k] - cur[k];
+        if (Math.abs(d) > 0.01) { cur[k] += d * 0.09; moving = true; } else cur[k] = tgt[k];
+      }
+      apply();
+      running = moving;
+      if (moving) requestAnimationFrame(tick);
+    };
+    const kick = () => { if (!running) { running = true; requestAnimationFrame(tick); } };
     hv.addEventListener('pointermove', e => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const r = hv.getBoundingClientRect();
-        // map pointer to the glow layer, which extends 10% / 14% beyond the frame
-        hv.style.setProperty('--mx', (10 + (e.clientX - r.left) / r.width * 80) / 1 + '%');
-        hv.style.setProperty('--my', (12 + (e.clientY - r.top) / r.height * 76) / 1 + '%');
-      });
+      const r = hv.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height; // 0..1
+      tgt.ry = (x - 0.5) * 16;          // tilt toward the cursor
+      tgt.rx = (0.5 - y) * 10;
+      tgt.mx = 10 + x * 80;             // glow trails the cursor
+      tgt.my = 12 + y * 76;
+      tgt.fx = (x - 0.5) * -18;         // labels drift the other way for depth
+      tgt.fy = (y - 0.5) * -12;
+      kick();
     });
+    hv.addEventListener('pointerleave', () => { Object.assign(tgt, rest); kick(); });
+    apply();
   }
 
   /* ---------- Back to top ---------- */
