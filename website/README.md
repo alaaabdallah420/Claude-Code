@@ -27,7 +27,7 @@ Both load from a free CDN, so there's nothing to install. If they ever fail to l
    Swap them for newer frames anytime. Keep them 16:9, about 1100 px wide.
 3. **Maps section**: uses `assets/f-map-history.webp` (from the Yacine episode).
 4. **Results**: the numbers are real (IntoTheBlue squid video, YouTube Studio). The chart data is the `RETENTION` list in `main.js`.
-5. **Prices**: search `Starting at` in `index.html`.
+5. **Prices**: in `index.html`, search `PRICING`. Each tab (Documentaries, Shorts, Motion & Maps, Monthly) is one block, followed by the add-ons list and the new-client offer line.
 6. **Client names** in the moving strip: only keep names you've worked for.
 
 ## What was wrong with the old site

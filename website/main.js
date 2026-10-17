@@ -11,14 +11,14 @@ const WORK = {
     {
       feature: true,
       title: 'Yacine Yasslim · Episode 3',
-      tag: 'Latest project · History documentary · Animated maps · Motion design',
+      tag: 'History documentary · Maps · Motion design',
       url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
       thumb: 'assets/thumbs/yacine-ep3.webp',
     },
-    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'Documentary · 3D animation · IntoTheBlue' },
-    { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'Documentary · 3D animation · IntoTheBlue' },
-    { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'Documentary · IntoTheBlue' },
-    { id: 'ppXq8ilDw_o', title: 'Why Even the Deep Sea Monsters Fear Sperm Whales', tag: 'Documentary · IntoTheBlue' },
+    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
+    { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'IntoTheBlue · 3D animation' },
+    { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'IntoTheBlue · Documentary' },
+    { id: 'ppXq8ilDw_o', title: 'Why Even the Deep Sea Monsters Fear Sperm Whales', tag: 'IntoTheBlue · Documentary' },
   ],
   // e.g. { id: 'abc123XYZ', title: 'Hook edit', tag: 'TikTok · Reels' }
   shorts: [],
@@ -50,8 +50,8 @@ const RETENTION = {
         ${v.feature ? '<span class="vid__badge">Latest project</span>' : ''}
         <img src="${thumb}" alt="" loading="lazy" ${fallback}>
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></span>
       </span>
-      <span class="vid__meta"><span class="vid__title">${v.title}</span><span class="vid__tag">${v.tag || ''}</span></span>
     </a>`;
   };
   document.querySelectorAll('.vids').forEach(panel => {
@@ -128,10 +128,12 @@ const RETENTION = {
     const tip = document.createElement('div'); tip.className = 'chart__tip';
     let geo = null;
 
+    let drawn = false; // becomes true once the line has animated in
     const draw = () => {
       const W = chartEl.clientWidth, H = chartEl.clientHeight;
       if (!W) return;
-      const L = 40, R = W < 560 ? 16 : 24, T = 34, B = 28;
+      const narrow = W < 560;
+      const L = 44, R = narrow ? 14 : 20, T = 36, B = 30;
       const max = 110;
       const x = t => L + (t / RETENTION.duration) * (W - L - R);
       const y = v => T + (1 - v / max) * (H - T - B);
@@ -139,29 +141,55 @@ const RETENTION = {
       const line = smooth(pts);
       const ticks = [0, 25, 50, 75, 100];
       const xt = [0, RETENTION.duration / 2, RETENTION.duration];
-      const narrow = W < 560;
-      const marks = RETENTION.marks.map(([t, label], i) => {
+      const avg = 51.8;
+      // labels sit above the point; the last one sits below-left so it never leaves the chart
+      const marks = RETENTION.marks.map(([t, label], i, arr) => {
         const v = valueAt(t), px = x(t), py = y(v);
-        const anchor = i === 0 ? 'start' : i === RETENTION.marks.length - 1 ? 'end' : 'middle';
-        const dx = i === 0 ? 10 : i === RETENTION.marks.length - 1 ? -2 : 0;
+        const last = i === arr.length - 1, first = i === 0;
+        const anchor = first ? 'start' : last ? 'end' : 'middle';
+        const tx = first ? px + 10 : last ? px - 4 : px;
+        const ty = last ? py + 26 : py - 14;
         return `<g class="mark"><circle cx="${px}" cy="${py}" r="5"/>
-          <text x="${px + dx}" y="${py - 14}" text-anchor="${anchor}">${Math.round(v)}%${narrow ? '' : `<tspan class="sub" dx="6">${label}</tspan>`}</text></g>`;
+          <text x="${tx}" y="${ty}" text-anchor="${anchor}">${Math.round(v)}%${narrow ? '' : `<tspan class="sub" dx="6">${label}</tspan>`}</text></g>`;
       }).join('');
       chartEl.innerHTML = `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">
-        <defs><linearGradient id="rg" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stop-color="var(--gold)" stop-opacity=".38"/><stop offset="1" stop-color="var(--gold)" stop-opacity="0"/></linearGradient></defs>
-        <g class="grid">${ticks.map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ylab" x="${L - 10}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join('')}</g>
+        <defs>
+          <linearGradient id="rg" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#f0b85a" stop-opacity=".34"/><stop offset="1" stop-color="#f0b85a" stop-opacity="0"/></linearGradient>
+          <clipPath id="rclip"><rect class="clip" x="0" y="0" width="${drawn || reduced ? W : 0}" height="${H}"/></clipPath>
+        </defs>
+        <g class="grid">${ticks.map(v => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text class="ylab" x="${L - 12}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join('')}</g>
         ${xt.map((t, i) => `<text class="xlab" x="${x(t)}" y="${H - 6}" text-anchor="${i === 0 ? 'start' : i === 2 ? 'end' : 'middle'}">${fmt(t)}</text>`).join('')}
-        <g class="reveal-mask">
+        <g clip-path="url(#rclip)">
           <path d="${line} L${x(RETENTION.duration)},${y(0)} L${x(0)},${y(0)}Z" fill="url(#rg)"/>
           <path class="line" d="${line}"/>
-          ${marks}
         </g>
+        <g class="avg"><line x1="${L}" x2="${W - R}" y1="${y(avg)}" y2="${y(avg)}"/>
+          <text x="${W - R}" y="${y(avg) - 8}" text-anchor="end">AVG ${avg}%</text></g>
+        ${marks}
         <g class="scrub"><line y1="${T - 10}" y2="${y(0)}"/><circle r="6"/></g>
       </svg>`;
       chartEl.append(tip);
+      if (drawn || reduced) chartEl.classList.add('is-drawn');
       geo = { x, y, L, R, W };
     };
+
+    // animate the line from left to right the first time the chart scrolls into view
+    const animateIn = () => {
+      if (drawn) return;
+      const t0 = performance.now(), dur = 2200;
+      const step = now => {
+        const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        const rect = chartEl.querySelector('.clip'); // re-query: the chart may redraw mid-animation
+        if (rect) rect.setAttribute('width', chartEl.clientWidth * e);
+        if (k < 1) requestAnimationFrame(step);
+        else { drawn = true; chartEl.classList.add('is-drawn'); }
+      };
+      requestAnimationFrame(step);
+    };
+    new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) { animateIn(); obs.disconnect(); }
+    }, { threshold: 0.35 }).observe(chartEl);
 
     const scrub = clientX => {
       if (!geo) return;

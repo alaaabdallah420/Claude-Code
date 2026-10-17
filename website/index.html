@@ -274,58 +274,155 @@
 </section>
 
 <!-- ============ PRICING ============ -->
-<!-- Set your own prices here. -->
+<!-- Edit prices here. Each tab is one <div class="plans panel" data-panel="...">. -->
 <section class="section" id="pricing">
-  <div class="section__head">
-    <p class="pill reveal"><span class="dot"></span>Engagements</p>
-    <h2 class="h2 reveal">Ways to <em>work together</em></h2>
-    <p class="lead reveal">Every project receives a fixed proposal after a discovery call. Starting prices are listed so you can plan.</p>
+  <div class="section__head section__head--split">
+    <div>
+      <p class="pill reveal"><span class="dot"></span>Pricing</p>
+      <h2 class="h2 reveal">Transparent <em>pricing</em></h2>
+    </div>
+    <p class="lead reveal">Fixed prices in USD. Pick a package, or book a call and get a tailored proposal within 24 hours.</p>
   </div>
 
-  <div class="plans">
-    <article class="plan reveal">
-      <p class="plan__name">Motion &amp; Maps</p>
-      <p class="plan__desc">3D scenes, animated maps and motion graphics delivered for your own edit.</p>
-      <p class="plan__price"><span class="plan__from">Starting at</span>$450<small>per sequence</small></p>
-      <ul>
-        <li>3D animation or historical maps</li>
-        <li>Sound design on every sequence</li>
-        <li>Delivered on your timeline</li>
-        <li>Project files available</li>
-      </ul>
-      <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
-    </article>
+  <p class="offer reveal"><span class="dot"></span><b>New clients:</b>&nbsp;your first documentary or Shorts pack at 20% off, so you can test the fit.</p>
 
-    <article class="plan plan--featured reveal">
-      <p class="plan__tag">Most requested</p>
-      <p class="plan__name">Documentary Production</p>
-      <p class="plan__desc">Complete post-production for one 10–30 minute documentary.</p>
-      <p class="plan__price"><span class="plan__from">Starting at</span>$1,200<small>per film</small></p>
-      <ul>
-        <li>Story edit, pacing &amp; footage</li>
-        <li>3D animation &amp; animated maps</li>
-        <li>Motion design &amp; data visuals</li>
-        <li>Sound design &amp; final mix</li>
-        <li>Color grade &amp; YouTube master</li>
-      </ul>
-      <a href="#contact" class="btn btn--gold btn--block">Book a discovery call</a>
-    </article>
-
-    <article class="plan reveal">
-      <p class="plan__name">Studio Partnership</p>
-      <p class="plan__desc">A dedicated post-production studio for channels that publish on schedule.</p>
-      <p class="plan__price"><span class="plan__from">Starting at</span>$4,500<small>per month</small></p>
-      <ul>
-        <li>Four documentaries a month</li>
-        <li>Thumbnails &amp; packaging</li>
-        <li>Priority scheduling</li>
-        <li>Monthly retention review</li>
-      </ul>
-      <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
-    </article>
+  <div class="tabs reveal" role="tablist" aria-label="Service" data-tabs="price">
+    <button role="tab" aria-selected="true" data-tab="docs">Documentaries</button>
+    <button role="tab" aria-selected="false" data-tab="shorts">Shorts &amp; Reels</button>
+    <button role="tab" aria-selected="false" data-tab="motion">Motion &amp; Maps</button>
+    <button role="tab" aria-selected="false" data-tab="monthly">Monthly plans</button>
+    <span class="tabs__pill" aria-hidden="true"></span>
   </div>
 
-  <p class="plans__note reveal">A 50% deposit reserves your production slot. Revision rounds are billed separately at a fixed rate stated in your proposal.</p>
+  <div class="plans panel" data-group="price" data-panel="docs">
+      <article class="plan">
+        
+        <p class="plan__name">Essential</p>
+        <p class="plan__desc">Clean, well-paced edits for talking-head and voiceover videos.</p>
+        <p class="plan__price">$650<small>per video</small></p>
+        <p class="plan__sub">&nbsp;</p>
+        <ul><li>Up to 12 minutes</li><li>Story edit &amp; pacing</li><li>B-roll, captions &amp; titles</li><li>Music &amp; sound design</li><li>Color correction</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Get started</a>
+      </article>
+      <article class="plan plan--featured">
+        <p class="plan__tag">Most popular</p>
+        <p class="plan__name">Signature</p>
+        <p class="plan__desc">The full documentary treatment that keeps viewers watching.</p>
+        <p class="plan__price">$1,200<small>per video</small></p>
+        <p class="plan__sub">&nbsp;</p>
+        <ul><li>Up to 25 minutes</li><li>Everything in Essential</li><li>2D/3D animated maps</li><li>Motion graphics &amp; data visuals</li><li>Full sound design &amp; mix</li><li>Color grade &amp; YouTube master</li></ul>
+        <a href="#contact" class="btn btn--gold btn--block">Book a discovery call</a>
+      </article>
+      <article class="plan">
+        
+        <p class="plan__name">Cinematic</p>
+        <p class="plan__desc">Flagship films with custom 3D worlds and original visuals.</p>
+        <p class="plan__price">$2,400<small>per video</small></p>
+        <p class="plan__sub">&nbsp;</p>
+        <ul><li>Up to 40 minutes</li><li>Everything in Signature</li><li>Custom 3D scenes &amp; creatures</li><li>Archival &amp; footage research</li><li>Thumbnail included</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
+      </article>
+  </div>
+  <div class="plans panel" data-group="price" data-panel="shorts" hidden>
+      <article class="plan">
+        
+        <p class="plan__name">Starter</p>
+        <p class="plan__desc">A consistent month of vertical content.</p>
+        <p class="plan__price">$480<small>8 Shorts</small></p>
+        <p class="plan__sub">$60 per Short</p>
+        <ul><li>Up to 60 seconds each</li><li>Hook-first editing</li><li>Animated captions</li><li>Sound design &amp; music</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Get started</a>
+      </article>
+      <article class="plan plan--featured">
+        <p class="plan__tag">Best value</p>
+        <p class="plan__name">Growth</p>
+        <p class="plan__desc">Daily-ish posting on YouTube, TikTok and Reels.</p>
+        <p class="plan__price">$880<small>16 Shorts</small></p>
+        <p class="plan__sub">$55 per Short</p>
+        <ul><li>Everything in Starter</li><li>Motion graphics &amp; zooms</li><li>Cut from your long-form videos</li><li>Delivered in weekly batches</li></ul>
+        <a href="#contact" class="btn btn--gold btn--block">Book a discovery call</a>
+      </article>
+      <article class="plan">
+        
+        <p class="plan__name">Volume</p>
+        <p class="plan__desc">Daily posting for channels that want to dominate the feed.</p>
+        <p class="plan__price">$1,500<small>30 Shorts</small></p>
+        <p class="plan__sub">$50 per Short</p>
+        <ul><li>Everything in Growth</li><li>Custom caption style</li><li>Platform-specific exports</li><li>Priority turnaround</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
+      </article>
+  </div>
+  <div class="plans panel" data-group="price" data-panel="motion" hidden>
+      <article class="plan">
+        
+        <p class="plan__name">Graphics Pack</p>
+        <p class="plan__desc">Motion graphics dropped into your own edit.</p>
+        <p class="plan__price">$390<small>15 graphics</small></p>
+        <p class="plan__sub">$26 per graphic</p>
+        <ul><li>Titles, info cards, stats &amp; lists</li><li>Sound design on every graphic</li><li>Matched to your channel style</li><li>Delivered as overlays or on your timeline</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Get started</a>
+      </article>
+      <article class="plan plan--featured">
+        <p class="plan__tag">Most popular</p>
+        <p class="plan__name">Map Pack</p>
+        <p class="plan__desc">Animated historical and geographic maps.</p>
+        <p class="plan__price">$540<small>3 map sequences</small></p>
+        <p class="plan__sub">$180 per sequence</p>
+        <ul><li>Territories, borders &amp; routes</li><li>Labels, insignia &amp; dates</li><li>Textured relief style</li><li>Sound design included</li></ul>
+        <a href="#contact" class="btn btn--gold btn--block">Book a discovery call</a>
+      </article>
+      <article class="plan">
+        
+        <p class="plan__name">3D Scene</p>
+        <p class="plan__desc">A photoreal 3D sequence built for your story.</p>
+        <p class="plan__price">$450<small>per scene</small></p>
+        <p class="plan__sub">&nbsp;</p>
+        <ul><li>Up to 20 seconds</li><li>Modelling, lighting &amp; animation</li><li>Creatures, objects or environments</li><li>Camera move designed to the script</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
+      </article>
+  </div>
+  <div class="plans panel" data-group="price" data-panel="monthly" hidden>
+      <article class="plan">
+        
+        <p class="plan__name">Creator</p>
+        <p class="plan__desc">For channels publishing every two weeks.</p>
+        <p class="plan__price">$2,200<small>per month</small></p>
+        <p class="plan__sub">Save ~15%</p>
+        <ul><li>2 Signature documentaries</li><li>8 Shorts</li><li>Thumbnails included</li><li>Priority scheduling</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Get started</a>
+      </article>
+      <article class="plan plan--featured">
+        <p class="plan__tag">Best value</p>
+        <p class="plan__name">Studio</p>
+        <p class="plan__desc">A dedicated post-production studio for weekly uploads.</p>
+        <p class="plan__price">$4,200<small>per month</small></p>
+        <p class="plan__sub">Save ~20%</p>
+        <ul><li>4 Signature documentaries</li><li>16 Shorts</li><li>Thumbnails included</li><li>Monthly retention review</li><li>Direct WhatsApp line</li></ul>
+        <a href="#contact" class="btn btn--gold btn--block">Book a discovery call</a>
+      </article>
+      <article class="plan">
+        
+        <p class="plan__name">Custom</p>
+        <p class="plan__desc">Multiple channels, series or brand content.</p>
+        <p class="plan__price">Custom<small>quote</small></p>
+        <p class="plan__sub">&nbsp;</p>
+        <ul><li>Volume pricing</li><li>Dedicated production calendar</li><li>Brand style system</li><li>Invoicing through our US LLC</li></ul>
+        <a href="#contact" class="btn btn--glass btn--block">Request a proposal</a>
+      </article>
+  </div>
+
+  <div class="addons reveal">
+    <p class="addons__title">Add-ons</p>
+    <ul>
+      <li><span>Thumbnail design</span><b>$60</b></li>
+      <li><span>Rush delivery (48h)</span><b>+30%</b></li>
+      <li><span>Extra revision round</span><b>$90</b></li>
+      <li><span>Premiere / After Effects project files</span><b>$120</b></li>
+      <li><span>Script polish &amp; structure notes</span><b>$80</b></li>
+      <li><span>Licensed music &amp; footage sourcing</span><b>Included</b></li>
+    </ul>
+  </div>
+  <p class="plans__note reveal">A 50% deposit reserves your slot; the balance is due on delivery. Invoices from Alaa Business LLC (USA).</p>
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
@@ -372,8 +469,8 @@
   </div>
   <div class="faq">
     <details class="reveal"><summary>How long does a documentary take?</summary><p>Usually 7–10 days for a 15–20 minute film, depending on the amount of 3D and map work. Studio partners get priority scheduling. Rush delivery is available on request.</p></details>
-    <details class="reveal"><summary>Are revisions included?</summary><p>Revisions are billed per round at a fixed rate stated in your proposal. Most projects don’t need them, because the script, style and references are agreed before production starts.</p></details>
-    <details class="reveal"><summary>Do you edit Shorts?</summary><p>Yes, for existing clients and partnerships. Shorts are quoted per batch, usually cut from your long-form films.</p></details>
+    <details class="reveal"><summary>Are revisions included?</summary><p>Revision rounds are billed at $90 each (see Add-ons). Most projects don’t need them, because the script, style and references are agreed before production starts.</p></details>
+    <details class="reveal"><summary>Do you edit Shorts?</summary><p>Yes. Shorts come in packs of 8, 16 or 30, either cut from your long-form videos or edited from your own vertical footage.</p></details>
     <details class="reveal"><summary>What do I need to send?</summary><p>Your script or voiceover, plus any footage or references. If you don’t have footage, I can source licensed stock and archive footage for you.</p></details>
     <details class="reveal"><summary>Can you match my channel’s style?</summary><p>Yes. Send two or three videos you admire and I’ll match the pacing, typography, color and sound.</p></details>
     <details class="reveal"><summary>How does payment work?</summary><p>A 50% deposit reserves your slot and the balance is due on delivery. Partnerships are billed monthly. Invoices come from Alaa Business LLC (USA). PayPal, Wise, Payoneer or bank transfer.</p></details>
