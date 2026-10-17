@@ -31,7 +31,6 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 
 ## To do
 - Real LinkedIn profile URL (currently a placeholder linking to linkedin.com).
-- New portrait photos for About (`assets/alaa-portrait.webp`, 4:5).
 - Cal.com booking link for "Book a call" buttons.
 - The 4 Animations loops in `assets/loops/` are stand-ins made from stills (slow push-in/out). Replace each with a real 4–8s clip exported from Premiere (960×540 or 1280×720, H.264, silent, under ~1 MB) or a GIF.
 - The Product Launch Trailer thumbnail is still a map frame; a designed one (like `thumbs/vsl-flying-sales.webp`) would look better.
