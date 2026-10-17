@@ -15,6 +15,8 @@ const WORK = {
       url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
       thumb: 'assets/thumbs/yacine-ep3.webp',
     },
+    { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
+    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Talking head · Motion' },
     { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
     { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'IntoTheBlue · 3D animation' },
     { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'IntoTheBlue · Documentary' },
@@ -82,6 +84,13 @@ const RETENTION = {
     if (document.fonts) document.fonts.ready.then(sync);
     sync();
   });
+
+  /* ---------- Back to top ---------- */
+  document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    if (window.__lenis) window.__lenis.scrollTo(0);
+    else window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  }));
 
   /* ---------- Video lightbox (YouTube loads only on click) ---------- */
   const lb = document.getElementById('lightbox');
@@ -179,7 +188,7 @@ const RETENTION = {
       if (drawn) return;
       const t0 = performance.now(), dur = 2200;
       const step = now => {
-        const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        const k = Math.min(1, Math.max(0, (now - t0) / dur)), e = 1 - Math.pow(1 - k, 3);
         const rect = chartEl.querySelector('.clip'); // re-query: the chart may redraw mid-animation
         if (rect) rect.setAttribute('width', chartEl.clientWidth * e);
         if (k < 1) requestAnimationFrame(step);
@@ -258,11 +267,11 @@ const RETENTION = {
     gsap.registerPlugin(ScrollTrigger);
 
     if (window.Lenis) {
-      const lenis = new Lenis({ lerp: 0.1 });
+      const lenis = window.__lenis = new Lenis({ lerp: 0.1 });
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add(t => lenis.raf(t * 1000));
       gsap.ticker.lagSmoothing(0);
-      document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      document.querySelectorAll('a[href^="#"]:not([href="#top"])').forEach(a => a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
         if (target) { e.preventDefault(); lenis.scrollTo(target, { offset: -60 }); }
       }));
