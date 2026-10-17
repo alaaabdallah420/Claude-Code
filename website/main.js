@@ -166,6 +166,21 @@ const RETENTION = {
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
   }
 
+  /* ---------- Hero glow follows the mouse ---------- */
+  const hv = document.querySelector('.hero__visual');
+  if (hv && !reduced) {
+    let raf = 0;
+    hv.addEventListener('pointermove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const r = hv.getBoundingClientRect();
+        // map pointer to the glow layer, which extends 10% / 14% beyond the frame
+        hv.style.setProperty('--mx', (10 + (e.clientX - r.left) / r.width * 80) / 1 + '%');
+        hv.style.setProperty('--my', (12 + (e.clientY - r.top) / r.height * 76) / 1 + '%');
+      });
+    });
+  }
+
   /* ---------- Back to top ---------- */
   document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault();
