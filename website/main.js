@@ -13,6 +13,7 @@ const WORK = {
       title: 'Yacine Yasslim · Episode 3',
       tag: 'History documentary · Maps · Motion design',
       url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
+      embed: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/preview',
       thumb: 'assets/thumbs/yacine-ep3.webp',
     },
     { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
@@ -58,15 +59,15 @@ const RETENTION = {
   const card = (v, short) => {
     if (v.placeholder) return `
     <a class="vid vid--placeholder" href="#pricing">
-      <span class="vid__media"><span class="vid__plus" aria-hidden="true">+</span></span>
+      <span class="vid__media"><span class="vid__plus" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></span>
       <span class="vid__meta"><span class="vid__tag">${v.tag}</span><span class="vid__title">${v.title}</span></span>
     </a>`;
     const href = v.url || `https://www.youtube.com/watch?v=${v.id}`;
     const thumb = v.thumb || `assets/thumbs/${v.id}.webp`;
     const fallback = v.id ? `onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg'"` : '';
     return `
-    <a class="vid ${v.id ? 'yt' : ''} ${v.feature ? 'vid--feature' : ''}" href="${href}" target="_blank" rel="noopener"
-       ${v.id ? `data-id="${v.id}"` : ''} data-short="${v.native ? 1 : ''}" aria-label="Play ${v.title}">
+    <a class="vid ${v.id || v.embed ? 'yt' : ''} ${v.feature ? 'vid--feature' : ''}" href="${href}" target="_blank" rel="noopener"
+       ${v.id ? `data-id="${v.id}"` : ''} ${v.embed ? `data-embed="${v.embed}"` : ''} data-short="${v.native ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
         ${v.feature ? '<span class="vid__badge">Latest project</span>' : ''}
         <img src="${thumb}" alt="" loading="lazy" ${fallback}>
@@ -117,11 +118,12 @@ const RETENTION = {
   const close = () => { lb.hidden = true; frame.innerHTML = ''; document.body.style.overflow = ''; };
   document.addEventListener('click', e => {
     const t = e.target.closest('.yt');
-    if (!t || !t.dataset.id) return;
+    if (!t || !(t.dataset.id || t.dataset.embed)) return;
     if (window.self !== window.top) return; // inside a preview frame: let the link open YouTube
     e.preventDefault();
     frame.classList.toggle('is-short', !!t.dataset.short);
-    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${t.dataset.id}?autoplay=1&rel=0&modestbranding=1" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    const src = t.dataset.embed || `https://www.youtube-nocookie.com/embed/${t.dataset.id}?autoplay=1&rel=0&modestbranding=1`;
+    frame.innerHTML = `<iframe src="${src}" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
     lb.hidden = false; document.body.style.overflow = 'hidden';
   });
   lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('.lightbox__close')) close(); });
