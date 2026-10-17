@@ -16,7 +16,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - All prices say "Starting at". Big/complex tiers are "Custom quote".
 - Don't mention payment methods (no PayPal/Wise/Payoneer). Just "Invoices are issued by Alaa Business LLC (USA)".
 - IntoTheBlue is presented as client work, never as the owner's channel.
-- Work cards use the real YouTube thumbnails.
+- Work cards use the real YouTube thumbnails. Selected Work has 3 tabs (Long-form, Shorts & Reels, Ads & VSLs) driven by `WORK` in main.js; `{ placeholder: true }` entries are gold "your project next" slots to replace with new samples. Vertical covers are 9:16 crops in assets/thumbs.
 - Service visuals are drawn in CSS/SVG in the gold style; don't use screenshots there.
 - Copy: plain, confident, professional; never beginner-sounding labels.
 
@@ -33,5 +33,5 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - New portrait photos for About (`assets/alaa-portrait.webp`, 4:5).
 - Cal.com booking link for "Book a call" buttons.
 - Upload the Yacine Yasslim Ep. 3 video to YouTube/Vimeo and replace the Drive link in `main.js`.
-- Add Shorts to `WORK.shorts` (the tab appears automatically).
+- Replace the placeholder slots in `WORK.shorts` and `WORK.ads` with new samples.
 - Deploy: Cloudflare Pages, output directory = this folder; custom domain via Cloudflare Registrar.

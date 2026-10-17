@@ -519,3 +519,11 @@ p { margin: 0; }
 .socials a { display: inline-flex; align-items: center; gap: 8px; }
 .socials svg, .btn svg { width: 18px; height: 18px; flex: none; }
 .socials svg { color: var(--gold); }
+
+/* ---------- Work: placeholder slots ---------- */
+.vid--placeholder .vid__media { display: grid; place-items: center; align-content: center; gap: 14px; border-style: dashed; border-color: rgba(240,184,90,.35); background: radial-gradient(70% 60% at 50% 40%, rgba(240,184,90,.1), transparent 70%), var(--bg-2); box-shadow: none; }
+.vid--placeholder .vid__plus { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-size: 26px; font-weight: 300; color: var(--gold-hi); border: 1px solid var(--line-2); transition: transform .6s var(--ease), background .3s; }
+.vid--placeholder:hover .vid__plus { transform: scale(1.08) rotate(90deg); background: rgba(240,184,90,.12); }
+.vid--placeholder .vid__title { color: var(--muted); }
+.vids--shorts .vid__title { font-size: 16px; }
+.vids--shorts .vid__meta { padding-top: 14px; }

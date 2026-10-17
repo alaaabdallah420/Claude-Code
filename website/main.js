@@ -16,15 +16,29 @@ const WORK = {
       thumb: 'assets/thumbs/yacine-ep3.webp',
     },
     { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
-    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Talking head · Motion' },
+    { id: 'Sj4JboSZ-qQ', title: 'Angels Heard by NASA?', tag: 'Yacine · Documentary · Motion' },
+    { id: 'DE6eRTl43DI', title: 'The Story of the Prophet Ibrahim', tag: 'Yacine · History documentary' },
     { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
     { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'IntoTheBlue · 3D animation' },
     { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'IntoTheBlue · Documentary' },
-    { id: 'ppXq8ilDw_o', title: 'Why Even the Deep Sea Monsters Fear Sperm Whales', tag: 'IntoTheBlue · Documentary' },
   ],
-  // e.g. { id: 'abc123XYZ', title: 'Hook edit', tag: 'TikTok · Reels' }
-  shorts: [],
-  motion: [],
+  // Vertical edits. Covers are 9:16 images in assets/thumbs/<id>.webp.
+  shorts: [
+    { id: '9BfVfF89z_4', title: 'War map breakdown', tag: 'Yacine · 3D map · SFX' },
+    { id: '1-HiOjR-fBM', title: 'The Pareto principle', tag: 'Maksymilian · Neon motion' },
+    { id: '1b7R1PcUWA4', title: 'Not enough time?', tag: 'Reel · 3D animation' },
+    { id: 'g5VQDPh4LWI', title: 'Ender Dragon', tag: 'Reel · 3D animation' },
+    { id: 'PbK2OGVqe6g', title: 'Perfume ad', tag: 'Ad · 3D product scene' },
+    { id: 'FEBQx-135r0', title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
+    { placeholder: true, title: 'Your Short, next', tag: 'Shorts packs from $480' },
+    { placeholder: true, title: 'Your Reel, next', tag: 'Book a discovery call' },
+  ],
+  ads: [
+    { id: 'AgiVkBR3BYk', title: 'How I Charged My Client $10,892', tag: 'Ad · 3D motion · Iman Gadzhi style' },
+    { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
+    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
+    { placeholder: true, title: 'Your VSL or ad, next', tag: 'Ad packs from $600 · VSLs from $1,200' },
+  ],
 };
 
 /* Audience retention of the squid documentary (YouTube Studio, lifetime).
@@ -42,18 +56,23 @@ const RETENTION = {
 
   /* ---------- Render video grids ---------- */
   const card = (v, short) => {
+    if (v.placeholder) return `
+    <a class="vid vid--placeholder" href="#pricing">
+      <span class="vid__media"><span class="vid__plus" aria-hidden="true">+</span></span>
+      <span class="vid__meta"><span class="vid__tag">${v.tag}</span><span class="vid__title">${v.title}</span></span>
+    </a>`;
     const href = v.url || `https://www.youtube.com/watch?v=${v.id}`;
     const thumb = v.thumb || `assets/thumbs/${v.id}.webp`;
     const fallback = v.id ? `onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/${short ? 'oar2' : 'hqdefault'}.jpg'"` : '';
     return `
     <a class="vid ${v.id ? 'yt' : ''} ${v.feature ? 'vid--feature' : ''}" href="${href}" target="_blank" rel="noopener"
-       ${v.id ? `data-id="${v.id}"` : ''} data-short="${short ? 1 : ''}" aria-label="Play ${v.title}">
+       ${v.id ? `data-id="${v.id}"` : ''} data-short="${v.native ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
         ${v.feature ? '<span class="vid__badge">Latest project</span>' : ''}
         <img src="${thumb}" alt="" loading="lazy" ${fallback}>
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        <span class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></span>
       </span>
+      <span class="vid__meta"><span class="vid__tag">${v.tag || ''}</span><span class="vid__title">${v.title}</span></span>
     </a>`;
   };
   document.querySelectorAll('.vids').forEach(panel => {
