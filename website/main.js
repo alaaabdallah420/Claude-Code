@@ -42,7 +42,7 @@ const WORK = {
     { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
     { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
     { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
-    { placeholder: true, vertical: true, title: 'Your ad, next', tag: 'Ad packs from $600' },
+    { placeholder: true, vertical: true, title: 'Your ad, next', tag: 'Ad packs from $450' },
     { placeholder: true, vertical: true, title: 'Your UGC ad, next', tag: 'Book a discovery call' },
     { placeholder: true, vertical: true, title: 'Your launch, next', tag: 'Launch packages' },
   ],
