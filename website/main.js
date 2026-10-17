@@ -6,21 +6,41 @@
    - `feature: true` shows the video full width at the top.
    - A category with no videos is hidden automatically.
    ========================================================= */
+const VSL = {
+  feature: true, badge: 'Featured',
+  title: 'Flying Sales · Video Sales Letter',
+  tag: 'VSL · 11 min · Motion graphics · 3D maps',
+  url: 'https://drive.google.com/file/d/1mlHHyfFB3P2EgR6wV_lsT5WLA_luXw9J/view',
+  embed: 'https://drive.google.com/file/d/1mlHHyfFB3P2EgR6wV_lsT5WLA_luXw9J/preview',
+  thumb: 'assets/thumbs/vsl-flying-sales.webp',
+};
+const TRAILER = {
+  title: 'Product Launch Trailer',
+  tag: 'Yacine Tareb · Trailer · Maps · Motion design',
+  url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
+  embed: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/preview',
+  thumb: 'assets/thumbs/yacine-ep3.webp',
+};
+
 const WORK = {
-  // Ads, VSLs and trailers. `vertical: true` puts a video in the "Vertical ads" row.
+  // Your best work, in order. `vertical: true` items go in the vertical row underneath.
+  featured: [
+    VSL,
+    { id: 'N79q8bpAR9Q', title: 'Why Do Squids Become Giant Monsters in the Deep', tag: 'IntoTheBlue · 3D animation' },
+    { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
+    { id: '40909D2wUl8', title: 'The Massive Discovery Norway Made', tag: 'This Is Big Industry · Documentary · Maps' },
+    TRAILER,
+    { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
+    { id: 'FEBQx-135r0', vertical: true, title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
+    { id: '1-HiOjR-fBM', vertical: true, title: 'The Pareto principle', tag: 'Maksymilian · Neon motion' },
+    { id: '9BfVfF89z_4', vertical: true, title: 'War map breakdown', tag: 'Yacine Tareb · 3D map · SFX' },
+  ],
   ads: [
-    {
-      feature: true,
-      title: 'Product Launch Trailer',
-      tag: 'Yacine Tareb · Trailer · Maps · Motion design',
-      url: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/view',
-      embed: 'https://drive.google.com/file/d/1H2gS36BtXKl2u4JuCnTZqyE9x0pekJSZ/preview',
-      thumb: 'assets/thumbs/yacine-ep3.webp',
-    },
+    VSL,
+    TRAILER,
     { id: 'AgiVkBR3BYk', title: 'How I Charged My Client $10,892', tag: 'Ad · 3D motion · Iman Gadzhi style' },
     { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
     { id: 'mXaQeJz7EeU', title: 'How to Actually Win Premium Video Editing Clients', tag: 'Maksymilian Skrobisz · Coaching' },
-    { placeholder: true, title: 'Your VSL, next', tag: 'VSLs from $1,200' },
     { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
     { placeholder: true, vertical: true, title: 'Your ad, next', tag: 'Ad packs from $600' },
     { placeholder: true, vertical: true, title: 'Your UGC ad, next', tag: 'Book a discovery call' },
@@ -34,7 +54,6 @@ const WORK = {
     { id: 'ukKKfEk6ZT4', title: 'The Most Terrifying Ocean Predator From Every Era', tag: 'IntoTheBlue · 3D animation' },
     { id: 'Y3QsAac6VYc', title: 'Why the Ocean Gets Creepier the Deeper You Go', tag: 'IntoTheBlue · Documentary' },
   ],
-  // Vertical edits. Covers are 9:16 images in assets/thumbs/<id>.webp.
   shorts: [
     { id: '9BfVfF89z_4', title: 'War map breakdown', tag: 'Yacine Tareb · 3D map · SFX' },
     { id: '1-HiOjR-fBM', title: 'The Pareto principle', tag: 'Maksymilian · Neon motion' },
@@ -44,6 +63,14 @@ const WORK = {
     { placeholder: true, title: 'Your Short, next', tag: 'Shorts packs from $480' },
     { placeholder: true, title: 'Your Reel, next', tag: 'Book a discovery call' },
     { placeholder: true, title: 'Your TikTok, next', tag: 'Shorts packs from $480' },
+  ],
+  // `reel` = a looping silent video (MP4) shown big at the top of the tab.
+  animations: [
+    { reel: 'assets/animation-reel.mp4', poster: 'assets/animation-reel-poster.webp', title: 'Animation reel', tag: '3D · Motion design · Maps · Data visuals' },
+    { id: '1b7R1PcUWA4', vertical: true, title: 'Not enough time?', tag: 'Reel · 3D animation' },
+    { id: 'g5VQDPh4LWI', vertical: true, title: 'Ender Dragon', tag: 'Reel · 3D animation' },
+    { id: 'FEBQx-135r0', vertical: true, title: 'The prophets’ family tree', tag: 'Short · 3D graphics' },
+    { id: 'PbK2OGVqe6g', vertical: true, title: 'Perfume ad', tag: 'Ad · 3D product scene' },
   ],
 };
 
@@ -74,7 +101,7 @@ const RETENTION = {
     <a class="vid ${v.id || v.embed ? 'yt' : ''} ${v.feature ? 'vid--feature' : ''}" href="${href}" target="_blank" rel="noopener"
        ${v.id ? `data-id="${v.id}"` : ''} ${v.embed ? `data-embed="${v.embed}"` : ''} data-short="${v.native ? 1 : ''}" aria-label="Play ${v.title}">
       <span class="vid__media">
-        ${v.feature ? '<span class="vid__badge">Latest project</span>' : ''}
+        ${v.feature ? `<span class="vid__badge">${v.badge || 'Latest project'}</span>` : ''}
         <img src="${thumb}" alt="" loading="lazy" ${fallback}>
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
       </span>
@@ -86,9 +113,16 @@ const RETENTION = {
     if (!list.length) { panel.innerHTML = ''; return; }
     const wide = list.filter(v => !v.vertical), tall = list.filter(v => v.vertical);
     if (panel.dataset.panel === 'shorts') { panel.innerHTML = `<div class="vids vids--shorts">${list.map(v => card(v, true)).join('')}</div>`; return; }
+    const labels = { ads: 'Vertical ads', featured: 'Vertical edits', animations: '3D animation reels' };
+    const reel = v => `
+      <figure class="reel">
+        <div class="reel__frame"><video src="${v.reel}" poster="${v.poster || ''}" autoplay muted loop playsinline preload="metadata"></video>
+          <span class="reel__live"><b></b>${v.title}</span></div>
+        <figcaption class="vid__meta"><span class="vid__tag">${v.tag || ''}</span></figcaption>
+      </figure>`;
     panel.innerHTML =
-      (wide.length ? `<div class="vids">${wide.map(v => card(v, false)).join('')}</div>` : '') +
-      (tall.length ? `<p class="vids__label">Vertical ads</p><div class="vids vids--shorts">${tall.map(v => card(v, true)).join('')}</div>` : '');
+      (wide.length ? `<div class="vids">${wide.map(v => v.reel ? reel(v) : card(v, false)).join('')}</div>` : '') +
+      (tall.length ? `<p class="vids__label">${labels[panel.dataset.panel] || 'Vertical'}</p><div class="vids vids--shorts">${tall.map(v => card(v, true)).join('')}</div>` : '');
   });
 
   /* ---------- Tabs: hide empty categories; hide the bar if only one is left ---------- */

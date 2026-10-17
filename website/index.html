@@ -115,16 +115,20 @@
   </div>
 
   <div class="tabs reveal" role="tablist" aria-label="Work type" data-tabs="work">
-    <button role="tab" aria-selected="true" data-tab="ads">Ads &amp; VSLs</button>
+    <button role="tab" aria-selected="true" data-tab="featured">Featured work</button>
+    <button role="tab" aria-selected="false" data-tab="ads">Ads &amp; VSLs</button>
     <button role="tab" aria-selected="false" data-tab="long">Long-form</button>
     <button role="tab" aria-selected="false" data-tab="shorts">Shorts &amp; Reels</button>
+    <button role="tab" aria-selected="false" data-tab="animations">Animations</button>
     <span class="tabs__pill" aria-hidden="true"></span>
   </div>
 
   <!-- Videos are rendered from the WORK list at the top of main.js -->
-  <div class="panel" data-group="work" data-panel="ads"></div>
+  <div class="panel" data-group="work" data-panel="featured"></div>
+  <div class="panel" data-group="work" data-panel="ads" hidden></div>
   <div class="panel" data-group="work" data-panel="long" hidden></div>
   <div class="panel" data-group="work" data-panel="shorts" hidden></div>
+  <div class="panel" data-group="work" data-panel="animations" hidden></div>
 </section>
 
 <!-- ============ CAPABILITIES ============ -->
