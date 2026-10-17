@@ -13,7 +13,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 ## Owner's preferences (keep these)
 - Luxury, clean, dark gold look. No cream/light sections. Divider line (`section--line`) between every section.
 - Target clients: businesses (VSLs, ads, brand films, founders), plus documentary channels. Not focused on faceless YouTubers.
-- No free revisions anywhere. Revisions are a paid add-on ($90/round).
+- One revision round is included free; extra rounds are $60 each (add-on).
 - All prices say "Starting at". Big/complex tiers are "Custom quote".
 - Don't mention payment methods (no PayPal/Wise/Payoneer). Just "Invoices are issued by Alaa Business LLC (USA)".
 - IntoTheBlue is presented as client work, never as the owner's channel.
@@ -27,7 +27,7 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - Shorts: 6 for $480 · 12 for $900 (most popular) · 24 for $1,600 (best value, under $67/Short)
 - Motion & 3D: Map Sequence from $120 (1) · Graphics Pack from $260 (10, most popular) · 3D Scene from $200
 - Monthly: Growth from $1,800 (2 Signature-level videos/VSLs + 3 Shorts ≈ $780/video + $80/Short, saves 32%) · Studio from $2,800 (3 Signature-level videos/VSLs + 12 Shorts ≈ $673/video + $65/Short, saves 38%) · Custom
-- Add-ons: thumbnail $60 · rush +30% · revision round $90 · project files $150 · script notes $80
+- Add-ons: thumbnail $60 · rush +30% · extra revision round $60 (first one free) · project files $150 · script notes $80
 
 ## To do
 - Real LinkedIn profile URL (currently a placeholder linking to linkedin.com).
