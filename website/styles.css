@@ -351,11 +351,18 @@ p { margin: 0; }
 .map { position: relative; width: 58%; min-width: 240px; margin: -14px -14px -18px 0; aspect-ratio: 320 / 180; }
 .map img, .map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .map svg { overflow: visible; }
-.map__route { fill: none; stroke: var(--gold-hi); stroke-width: 1.4; stroke-linecap: round; stroke-dasharray: 200; stroke-dashoffset: 200; animation: draw 5s var(--ease) infinite; animation-delay: var(--d, 0s); filter: drop-shadow(0 0 3px rgba(240,184,90,.9)); }
+.map__glow { fill: none; stroke: var(--gold); stroke-width: 5; stroke-linecap: round; opacity: 0; filter: blur(3px); }
+.map__route { fill: none; stroke: var(--gold-hi); stroke-width: 1.3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.map__pulse { fill: none; stroke: #fff4dc; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: .07 .93; stroke-dashoffset: 1; opacity: 0; }
+.tile.in .map__route { animation: route-draw 1.6s cubic-bezier(.45,0,.2,1) forwards; animation-delay: calc(var(--d) * .6 + .3s); }
+.tile.in .map__glow { animation: fade-in 1.2s ease forwards; animation-delay: calc(var(--d) * .6 + 1.2s); }
+.tile.in .map__pulse { animation: route-pulse 2.8s linear infinite; animation-delay: calc(var(--d) * .6 + 1.9s); }
 .map__pin { fill: var(--text); }
 .map__pin--end { fill: var(--gold); animation: glow 2s ease-in-out infinite; }
 .map__label { fill: var(--muted); font: 600 6px var(--sans); letter-spacing: .08em; text-transform: uppercase; }
-@keyframes draw { 0% { stroke-dashoffset: 200; } 55%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -200; } }
+@keyframes route-draw { to { stroke-dashoffset: 0; } }
+@keyframes fade-in { to { opacity: .28; } }
+@keyframes route-pulse { 0% { stroke-dashoffset: 1; opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
 @media (max-width: 760px) { .tile--map { flex-direction: column; align-items: stretch; } .map { width: 100%; min-width: 0; margin: 0; } }
 
 .wave { display: flex; align-items: center; gap: 5px; height: 70px; }
@@ -447,7 +454,8 @@ p { margin: 0; }
 .faq details p { color: var(--muted); padding: 0 40px 26px 0; max-width: 700px; }
 
 /* ---------- CTA ---------- */
-.cta { text-align: center; padding: clamp(72px, 10vw, 130px) var(--gutter); background: radial-gradient(55% 60% at 50% 100%, rgba(240,184,90,.2), transparent 70%); border-top: 1px solid var(--line); }
+.cta { text-align: center; padding: clamp(72px, 10vw, 130px) var(--gutter); background: radial-gradient(55% 60% at 50% 100%, rgba(240,184,90,.2), transparent 70%); position: relative; }
+.cta::before { content: ""; position: absolute; top: 0; left: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))); right: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))); height: 1px; background: linear-gradient(90deg, transparent, var(--line-2), transparent); }
 .cta__title { font-size: clamp(38px, 6.4vw, 84px); max-width: 1000px; margin: 0 auto; }
 .cta .hero__ctas { justify-content: center; margin-top: 40px; }
 .socials { display: flex; justify-content: center; gap: 28px; margin-top: 36px; font-size: 14px; color: var(--muted); }
@@ -474,6 +482,8 @@ p { margin: 0; }
 .js .hero__visual.reveal.in { transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
+  .map__route { stroke-dashoffset: 0; }
+  .map__glow { opacity: .28; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; filter: none; }
   .statement__text .w { opacity: 1 !important; }
@@ -490,18 +500,14 @@ p { margin: 0; }
 @media (max-width: 900px) { .who { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .who { grid-template-columns: 1fr; } }
 
-/* ---------- Brand films viewfinder ---------- */
-.viewfinder { position: relative; height: 120px; border-radius: 12px; background: radial-gradient(70% 90% at 60% 40%, rgba(240,184,90,.18), transparent 70%), #100b07; border: 1px solid var(--line); overflow: hidden; }
-.vf__c { position: absolute; width: 16px; height: 16px; border-color: var(--gold-hi); border-style: solid; opacity: .8; }
-.vf__c--tl { top: 10px; left: 10px; border-width: 1.5px 0 0 1.5px; }
-.vf__c--tr { top: 10px; right: 10px; border-width: 1.5px 1.5px 0 0; }
-.vf__c--bl { bottom: 10px; left: 10px; border-width: 0 0 1.5px 1.5px; }
-.vf__c--br { bottom: 10px; right: 10px; border-width: 0 1.5px 1.5px 0; }
-.vf__rec { position: absolute; top: 14px; left: 34px; display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 600; letter-spacing: .14em; color: var(--text); }
-.vf__rec b { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: glow 1.4s ease-in-out infinite; }
-.vf__tc { position: absolute; bottom: 14px; right: 34px; font-size: 10px; letter-spacing: .1em; color: var(--muted); font-variant-numeric: tabular-nums; }
-.vf__focus { position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; translate: -50% -50%; border: 1px solid rgba(255,216,140,.7); border-radius: 6px; animation: focus 3.2s var(--ease) infinite; }
-@keyframes focus { 0%, 100% { transform: scale(1.4); opacity: 0; } 30%, 70% { transform: scale(1); opacity: 1; } }
+/* ---------- Brand films still ---------- */
+.filmframe { position: relative; aspect-ratio: 2.39 / 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-2); background: #000; }
+.filmframe img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) sepia(.15) contrast(1.05); animation: kenburns 18s ease-in-out infinite alternate; }
+.filmframe::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), transparent 30%, transparent 70%, rgba(0,0,0,.45)); }
+.filmframe__meta, .filmframe__tc { position: absolute; z-index: 1; font-size: 9px; font-weight: 600; letter-spacing: .14em; color: rgba(255,244,228,.85); font-variant-numeric: tabular-nums; }
+.filmframe__meta { top: 9px; left: 11px; display: flex; align-items: center; gap: 6px; }
+.filmframe__meta b { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 6px var(--gold); animation: glow 1.4s ease-in-out infinite; }
+.filmframe__tc { bottom: 9px; right: 11px; }
 
 /* ---------- Socials ---------- */
 .socials a { display: inline-flex; align-items: center; gap: 8px; }
