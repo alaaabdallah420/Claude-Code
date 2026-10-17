@@ -38,5 +38,8 @@ No build step. Open `index.html` in a browser, or run `python3 -m http.server` i
 - Replace the placeholder slots in `WORK.shorts` and `WORK.ads` with new samples.
 - Deploy: Cloudflare Pages, output directory = this folder; custom domain via Cloudflare Registrar.
 
+## Mobile
+- Under 800px the nav collapses into a gold menu button (`.nav__toggle`). Under 640px pricing cards become a horizontal swipe row, hero buttons go full width, and section spacing tightens. Check new sections at 375px wide.
+
 ## Pricing logic
 - Monthly plans are priced against Signature-level work ($1,200/video). Keep the words "Signature-level" on the monthly cards, or Growth would cost more than buying basic VSLs separately.

@@ -36,7 +36,7 @@ const WORK = {
     { id: '9BfVfF89z_4', vertical: true, title: 'War map breakdown', tag: 'Yacine Tareb · 3D map · SFX' },
   ],
   ads: [
-    VSL,
+    { ...VSL, feature: false },
     TRAILER,
     { id: 'AgiVkBR3BYk', title: 'How I Charged My Client $10,892', tag: 'Ad · 3D motion · Iman Gadzhi style' },
     { id: 'WJMPzeilAoE', title: 'How to Actually Start Earning More', tag: 'Jakub B. Bączek · Business' },
@@ -155,6 +155,16 @@ const RETENTION = {
     if (document.fonts) document.fonts.ready.then(sync);
     sync();
   });
+
+  /* ---------- Mobile menu ---------- */
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav__toggle');
+  if (toggle) {
+    const setOpen = open => { nav.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', open); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+    nav.querySelectorAll('.nav__links a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+  }
 
   /* ---------- Back to top ---------- */
   document.querySelectorAll('a[href="#top"]').forEach(a => a.addEventListener('click', e => {

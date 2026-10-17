@@ -567,3 +567,84 @@ p { margin: 0; }
 .vid--loop .vid__media::before { content: ""; position: absolute; z-index: 1; top: 14px; left: 14px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); animation: glow 1.4s ease-in-out infinite; }
 
 .plan__tag--quiet { background: linear-gradient(rgba(240,184,90,.14), rgba(240,184,90,.14)), #17100a; color: var(--gold-hi); border: 1px solid rgba(240,184,90,.45); }
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+.nav__actions { display: flex; align-items: center; gap: 10px; }
+.nav__toggle { display: none; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-2); position: relative; }
+.nav__toggle span { position: absolute; left: 12px; right: 12px; height: 1.6px; border-radius: 2px; background: var(--gold-hi); transition: transform .4s var(--ease), top .4s var(--ease); }
+.nav__toggle span:nth-child(1) { top: 16px; }
+.nav__toggle span:nth-child(2) { top: 24px; }
+.nav.is-open .nav__toggle span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.nav.is-open .nav__toggle span:nth-child(2) { top: 20px; transform: rotate(-45deg); }
+
+@media (max-width: 800px) {
+  .nav__toggle { display: block; }
+  .nav__links {
+    display: flex; flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    padding: 8px max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px));
+    background: rgba(12, 8, 5, .97); border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .35s var(--ease), transform .35s var(--ease);
+  }
+  .nav.is-open .nav__links { opacity: 1; transform: none; pointer-events: auto; }
+  .nav__links a { font-size: 20px; font-weight: 500; color: var(--text); padding: 14px 4px; border-bottom: 1px solid var(--line); }
+  .nav__links a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 640px) {
+  :root { --radius: 22px; }
+  .section { padding-top: 48px; padding-bottom: 48px; }
+  .section__head { margin-bottom: 28px; }
+  .statement { padding-top: 44px; padding-bottom: 44px; }
+  .cta { padding-top: 64px; padding-bottom: 64px; }
+  .h2 { font-size: clamp(32px, 9vw, 40px); }
+  .lead { font-size: 16px; }
+
+  /* hero */
+  .hero { padding-top: calc(66px + 28px); gap: 36px; }
+  .hero__title { font-size: clamp(42px, 12.5vw, 54px); }
+  .hero__sub { font-size: 16px; margin-top: 18px; }
+  .chips { gap: 8px; margin-top: 22px; }
+  .chip { height: 38px; padding: 0 12px; font-size: 13px; border-radius: 12px; }
+  .hero__ctas { flex-direction: column; }
+  .hero__ctas .btn, .cta .btn { width: 100%; }
+  .float { padding: 9px 13px; font-size: 12px; }
+  .float b { font-size: 15px; }
+  .float--b { right: 8px; top: -16px; }
+
+  /* who I work with */
+  .who__item { padding: 20px 20px 22px; }
+  .who__item h3 { font-size: 17px; }
+
+  /* tabs: swipeable, edge to edge */
+  .tabs { margin-bottom: 24px; }
+  .tabs button { height: 38px; padding: 0 16px; font-size: 13px; }
+
+  /* pricing: swipe through cards */
+  .plans { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding: 18px 16px 8px; margin: 0 -16px; max-width: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .plans::-webkit-scrollbar { display: none; }
+  .plans[hidden] { display: none !important; }
+  .plan { flex: 0 0 84%; scroll-snap-align: center; padding: 30px 24px 24px; }
+  .plan__price { font-size: 40px; }
+  .plans__hint { display: flex; }
+  .addons { padding: 20px; }
+  .offer { display: block; font-size: 14px; padding: 14px 16px; line-height: 1.5; }
+  .offer .dot { display: inline-block; margin-right: 8px; vertical-align: middle; }
+
+  /* tap targets */
+  .socials { flex-wrap: wrap; gap: 4px 8px; }
+  .socials a { padding: 10px 10px; }
+  .footer__links a { padding: 8px 0; display: inline-block; }
+  .case__src { display: inline-block; padding: 8px 0; }
+
+  .about__nums b { font-size: 30px; }
+  .quote { padding: 26px 22px; }
+  .quote blockquote { font-size: 21px; }
+  .tile { padding: 24px; }
+  .case { padding: 22px; }
+  .lightbox__close { top: max(14px, env(safe-area-inset-top, 0px)); right: 14px; }
+}
+.plans__hint { display: none; justify-content: center; gap: 6px; margin-top: 14px; font-size: 12px; color: var(--dim); letter-spacing: .08em; }
